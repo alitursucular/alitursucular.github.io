@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name: "Ali Turşucular"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/ali-avatar.jpg"
   bio: "I am an amazing person."
   location: "London, UK"
   email:
@@ -118,7 +118,7 @@ author:
       icon: "fas fa-fw fa-link"
       url: "https://alitursucular.github.io"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alitursucular/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
@@ -134,7 +134,7 @@ author:
 footer:
   links:
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alitursucular/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
@@ -291,3 +291,5 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: true
+      comments: # true
