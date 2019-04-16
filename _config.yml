@@ -114,9 +114,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:alitursucular@gmail.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://alitursucular.github.io"
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://alitursucular.github.io"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alitursucular/"
@@ -126,9 +126,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/alitursucular"
-    # - label: "Instagram"
-    # icon: "fab fa-fw fa-instagram"
-    # url: "https://instagram.com/"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  url: "https://instagram.com/"
 
 # Site Footer
 footer:
