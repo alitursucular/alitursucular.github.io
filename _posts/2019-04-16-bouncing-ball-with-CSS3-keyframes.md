@@ -5,4 +5,4 @@ tags: [CSS3, keyframes, bezier curves, flex layout]
 excerpt: "Introduction text"
 ---
 
-This is the first post.
+This post is about Bouncing ball with CSS3 keyframes (Bonus: Impact Effect & Bezier Curves)
