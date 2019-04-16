@@ -1,6 +1,6 @@
 ---
 title: "About"
-permalink: "/about/
+permalink: /about/
 ---
 
 Hi! This is my short bio.
