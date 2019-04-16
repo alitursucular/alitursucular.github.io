@@ -1,7 +1,18 @@
 ---
 title: "Fetching API data with ReactJS (Fetch API)"
 date: 2019-04-16
-tags: [CSS3, keyframes, bezier curves, flex layout]
+tags:
+  [
+    Fetch API,
+    reactJS,
+    states,
+    virtual DOM,
+    create-react-app,
+    JavaScript,
+    ES6,
+    git,
+    github,
+  ]
 excerpt: "Introduction text"
 ---
 
