@@ -1,0 +1,8 @@
+---
+title: "Bouncing ball with CSS3 keyframes (Bonus: Impact Effect & Bezier Curves)"
+date: 2019-04-16
+tags: [CSS3, keyframes, bezier curves, flex layout]
+excerpt: "Introduction text"
+---
+
+This is the first post.
