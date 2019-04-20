@@ -107,9 +107,9 @@ analytics:
 author:
   name: "Ali Turşucular"
   avatar: "/assets/images/ali-avatar.jpg"
-  bio: "I am an amazing person."
+  bio: "Love to code. Love to design. Let's have a coffee."
   location: "London, UK"
-  email:
+  email: "alitursucular@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
