@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
   - title: "Resume"
     url: "/assets/docs/ali-tursucular-resume.pdf"
+  - title: "About"
+    url: /about/
   - title: "Portfolio"
     url: /
   # - title: "Sample Posts"
