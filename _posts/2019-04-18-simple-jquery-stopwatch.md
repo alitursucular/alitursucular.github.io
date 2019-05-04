@@ -90,4 +90,4 @@ Thanks for reading! I would be very pleased if you could share your thoughts.
 
 Here is the [demo](https://alitursucular.github.io/simple-jquery-stopwatch-demo/).
 
-Here is the [GitHub Repository](https://github.com/alitursucular/simple-jquery-stopwatch-demo) of the project.
+Here is the [GitHub repository](https://github.com/alitursucular/simple-jquery-stopwatch-demo) of the project.

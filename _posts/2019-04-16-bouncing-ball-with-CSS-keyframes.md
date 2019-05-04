@@ -102,6 +102,6 @@ This is all for this project, thanks for reading! I would be very pleased if you
 
 Here is the [demo](https://alitursucular.github.io/bouncing-ball-with-CSS-keyframes-demo/).
 
-Here is the [GitHub Repository](https://github.com/alitursucular/bouncing-ball-with-CSS-keyframes-demo) of the project.
+Here is the [GitHub repository](https://github.com/alitursucular/bouncing-ball-with-CSS-keyframes-demo) of the project.
 
 <sup>1</sup> _https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes_.
