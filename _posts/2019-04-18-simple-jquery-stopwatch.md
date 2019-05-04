@@ -2,7 +2,7 @@
 title: "Simple jQuery stopwatch"
 date: 2019-04-18
 tags: [JavaScript, jQuery, Date(), google fonts]
-excerpt: "I decided to use JavaScript date function at the core of this project. The main logic is; once the start button is pressed, date value of that moment is stored. Every 10 ms, this stored value is subtrated from the current date value."
+excerpt: "I decided to use JavaScript date function at the core of this project. The main logic is; once the start button is pressed, the date value of that moment is stored. Every 10 ms, this stored value is subtracted from the current date value."
 ---
 
 I would call this stopwatch example as oldies but goldies. I am seeing a similar demonstration on many portfolio pages and I also wanted make one. The coding was fun and a bit tricky. As I do in most of my projects, I began searching the net and analyzing different codes / web technologies. Although there are modern ways of doing such stopwatch, I sticked with jQuery since I wanted to include jQuery in my portfolio.
@@ -15,15 +15,15 @@ As always, let's breakdown the code and dive into details:
 startTime = new Date();
 ```
 
-I decided to use JavaScript date function at the core of this project. The main logic is; once the start button is pressed, date value of that moment is stored. Every 10 ms, this stored value is subtrated from the current date value. Since the elapsed time is slowly increasing, we achieve a chronometer effect.
+I decided to use JavaScript date function at the core of this project. The main logic is; once the start button is pressed, the date value of that moment is stored. Every 10 ms, this stored value is subtracted from the current date value. Since the elapsed time is slowly increasing, we achieve a chronometer effect.
 
 ```javascript
 var elapsedTime = new Date(new Date() - startTime - pauseDuration);
 ```
 
-You may notice that there is another variable named _pauseDuration_. Once I was sure that this logic functions properly, it was time to add extra functionality to the project.
+You may notice that there is another variable named _pauseDuration_. Once I was sure that this logic functions properly, it was time to add an extra functionality to the project.
 
-The user has the option to start, pause and reset the stopwatch. Once the start button is clicked, button state changes and becomes a pause button. If user clicks pause, stopwatch stops, interval is cleared and pause time is saved incase user decides to resume later.
+As for extra functionalities, the user has options to start, pause and reset the stopwatch. Once the start button is clicked, button state changes and becomes a pause button. If user clicks pause, stopwatch stops, interval is cleared and pause time is saved incase user decides to resume later.
 
 ```javascript
 pauseDuration += new Date() - pauseTime;
@@ -86,6 +86,6 @@ Lastly, I used monospaced (fixed-width) font for the sake of this project. Since
 
 Thanks for reading! I would be very pleased if you could share your thoughts.
 
-Here is the [demo](#)
+Here is the [demo](https://alitursucular.github.io/simple-stopwatch-build-with-jquery/).
 
-Here is the [GitHub repository](#) of the project.
+Here is the [GitHub Repository](https://github.com/alitursucular/simple-stopwatch-build-with-jquery) of the project.
