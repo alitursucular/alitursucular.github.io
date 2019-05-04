@@ -104,4 +104,4 @@ Here is the [demo](https://alitursucular.github.io/bouncing-ball-with-CSS-keyfra
 
 Here is the [GitHub Repository](https://github.com/alitursucular/bouncing-ball-with-CSS-keyframes-demo) of the project.
 
-<sup>1</sup> #### https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes.
+<sup>1</sup> _https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes_.
