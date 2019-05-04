@@ -1,8 +1,8 @@
 ---
 title: "Bouncing ball with CSS keyframes (Bonus: Impact effect & Bezier curves)"
 date: 2019-04-16
-tags: [CSS3, keyframes, bezier curves, flex layout]
-excerpt: "Introduction text"
+tags: [CSS, keyframes, bezier curves, flex layout]
+excerpt: "This project simulates a ball falling from a height. In order to make the animation more realistic, I showed the shape change at the moment of impact and the decreasing height due to friction."
 ---
 
 This project simulates a ball falling from a height. In order to make the animation more realistic, I showed the shape change at the moment of impact and the decreasing height due to friction.
@@ -38,7 +38,8 @@ The above decleration makes the magic. We write keyframe percantages in it and d
 ```css
 @keyframes bounce {
   8% {
-    /* Use the first 8% of duration time to reach bottom; which will be a quick fall */
+    /* Use the first 8% of duration time to 
+    reach bottom which, will be a quick fall */
     top: 70%;
     width: 160px;
     height: 100px;
@@ -103,4 +104,4 @@ Here is the [demo](https://alitursucular.github.io/bouncing-ball-with-CSS-keyfra
 
 Here is the [GitHub Repository](https://github.com/alitursucular/bouncing-ball-with-CSS-keyframes-demo) of the project.
 
-<sup>1</sup>: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes.
+<sup>1</sup> #### https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes.
