@@ -86,6 +86,6 @@ Lastly, I used monospaced (fixed-width) font for the sake of this project. Since
 
 Thanks for reading! I would be very pleased if you could share your thoughts.
 
-Here is the [demo](https://alitursucular.github.io/simple-stopwatch-build-with-jquery/).
+Here is the [demo](https://alitursucular.github.io/simple-jquery-stopwatch-demo/).
 
-Here is the [GitHub Repository](https://github.com/alitursucular/simple-stopwatch-build-with-jquery) of the project.
+Here is the [GitHub Repository](https://github.com/alitursucular/simple-jquery-stopwatch-demo) of the project.
