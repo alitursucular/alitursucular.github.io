@@ -84,6 +84,8 @@ Notice that, while stopwatch is counting, there is always a leading zero for sin
 
 Lastly, I used monospaced (fixed-width) font for the sake of this project. Since each digit occupies the same amount of horizontal space, we achieved improved UI rather than a vibrating visual.
 
+_Bonus: Stopwatch also starts/pauses with the space key on your keyboard._
+
 Thanks for reading! I would be very pleased if you could share your thoughts.
 
 Here is the [demo](https://alitursucular.github.io/simple-jquery-stopwatch-demo/).
