@@ -7,7 +7,7 @@ excerpt: "I love math and I enjoy diving into the logic of things that I use. Co
 
 I love math and I enjoy diving into the logic of things that I use. Color codes are one of them. Every color can be represented by different types and each type has different properties/areas of usage. (For example in web development, we generally use HEX and RGB(a),while offset printing uses CMYK) So the question came to my mind; what's the math behind it? _Note that: I am not an expert on color profiles, I am only interested in the conversion math._
 
-To begin with, since this project enables conversions between 6 different profiles, there are many functions to deal with. Instead of going to through them all, I will only focus on the HEX to RGB conversion. The rest can be found on my [GitHub repository](#).
+To begin with, since this project enables conversions between 6 different profiles, there are many functions to deal with. Instead of going to through them all, I will only focus on the HEX to RGB conversion. The rest can be found on my [GitHub repository](https://github.com/alitursucular/color-codes-conversion-website-demo).
 
 A hex triplet is a six-digit, three-byte hexadecimal number used in HTML, CSS, SVG, and other computing applications to represent colors.<sup>1</sup> The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue.<sup>2</sup> Before we take a look at HEX to RGB conversion, we first need to validate user input so it can be processed:
 
@@ -59,7 +59,7 @@ $("#hex").click(function() {
 });
 ```
 
-The above click function is basically a _bridge_ between the _user input_ and the _conversion function_. As it is mentioned above, it first formats the user input. Secondly, it detects whether it is 6 digit or 3 digit HEX; as well as whether it contains a # or not. (Note that, some HEX values can be represented in 3 digits. Since the six digits of a hex code are in fact three two-digit numbers that represents red, green and blue; special pairs can be represented with only 3 digits. As an example: #112233 is same as #123 or #AAAAAA is same as #AAA). Thirdly, we look for any unwanted characters in the input. If it has been successful until this point, we separate r, g, b pairs and send them to the conversion individually:
+The above click function is basically a _bridge_ between the _user input_ and the _conversion function_. As it is mentioned above, it first formats the user input. Secondly, it detects whether it is 6 digit or 3 digit HEX; as well as whether it contains a # or not. (Note that, some HEX values can be represented in 3 digits. Since the six digits of a hex code are in fact three two-digit numbers that represents red, green and blue; special pairs can be represented with only 3 digits. _(As an example: #112233 is same as #123 or #AAAAAA is same as #AAA)_. Thirdly, we look for any unwanted characters in the input. If it has been successful until this point, we separate r, g, b pairs and send them to the conversion individually:
 
 _It is important to note that, each above step has an else statement where user is prompted with relevant error!_
 
@@ -69,11 +69,11 @@ var g_hex_to_rgb_final = hex_seperator_convertor(hex_raw_g); // g pair
 var b_hex_to_rgb_final = hex_seperator_convertor(hex_raw_b); // b pair
 ```
 
-The general math is very simple. We are sure that our conversion function received two digits. (Such as 23, 95, A4, F7 etc.) I will be referring first digit as `X` and the second digit as `Y`. What is left to calculate is:
+The general math is very simple. We are sure that our conversion function received two digits _(Such as: 23, 95, A4, F7 etc.)_. I will be referring first digit as `X` and the second digit as `Y`. What is left to calculate is:
 
 ```javascript
 XY = X * 16 + Y
-// If received R digit is 23, then the math will be:
+// If received R digits are 2 and 3, then the math will be:
 R = 2 * 16 + 3
 ```
 
@@ -119,9 +119,9 @@ $('.rgb-result').attr('value', hex_to_rgb_final); // print to html
 
 Thanks for reading! Please feel free to contact me and share your thoughts.
 
-Here is the [demo](#).
+Here is the [demo](https://alitursucular.github.io/color-codes-conversion-website-demo/).
 
-Here is the [GitHub repository](#).
+Here is the [GitHub repository](https://github.com/alitursucular/color-codes-conversion-website-demo).
 
 <sup>1</sup> _what is hex linki_.
 <sup>2</sup> _what is rgb linki_.
