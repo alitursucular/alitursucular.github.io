@@ -23,7 +23,9 @@ tags:
 excerpt: "This post is about a complete real estate website with admin panel (Custom build CMS, MySQL and PHP). Unlike most of my other blog posts, this content does not has a GitHub repository."
 ---
 
-This post is about a complete real estate website with admin panel. Unlike most of my other blog posts, this content does not has a GitHub repository. It is because it was a private work to a customer. Nevertheless, I will be discussing the work I did in the following sections. (If you are willing to view the site immediately, please see the [link](https://www.platinatasehir.com). **(Once you open the page, please go through developer tools of your browser and see my mark at the beginning of the HTML)**).
+This post is about a complete real estate website with admin panel. Unlike most of my other blog posts, this content does not has a GitHub repository. It is because it was a private work to a customer. Nevertheless, I will be discussing the work I did in the following sections.
+
+_Note: If you are willing to view the site immediately, please see the [link](https://www.platinatasehir.com)._ **_Once you open the page, please go through developer tools of your browser and see my mark at the beginning of the HTML._**
 
 To begin with, this was one of my most comprehensive work. The website is for a real estate firm and they wanted me to make an admin panel where, all of their employees (agents) have their own accounts. The beautiy relies on the back-end. Apart from its front end, I used `PHP` and `MySQL` to power up tons of features.
 
