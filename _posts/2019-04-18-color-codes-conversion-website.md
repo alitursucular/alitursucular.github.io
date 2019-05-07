@@ -126,7 +126,6 @@ Here is the [demo](https://alitursucular.github.io/color-codes-conversion-websit
 
 Here is the [GitHub repository](https://github.com/alitursucular/color-codes-conversion-website-demo).
 
-<sup>1</sup> _https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device_
-<sup>2</sup> _https://en.wikipedia.org/wiki/Web_colors_
+<sup>1</sup> _https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device_<br/>
+<sup>2</sup> _https://en.wikipedia.org/wiki/Web_colors_<br/>
 <sup>3</sup> _https://en.wikipedia.org/wiki/RGB_color_model_
-
