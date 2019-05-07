@@ -7,9 +7,12 @@ excerpt: "I love math and I enjoy diving into the logic of things that I use. Co
 
 I love math and I enjoy diving into the logic of things that I use. Color codes are one of them. Every color can be represented by different types and each type has different properties/areas of usage. (For example in web development, we generally use HEX and RGB(a),while offset printing uses CMYK) So the question came to my mind; what's the math behind it? _Note that: I am not an expert on color profiles, I am only interested in the conversion math._
 
+**The UI:**
+First version of this project dates back to 5 years. I have revised the UI of the site for the sake of this blog post. Pages previously had PHP extension but, since GitHub Pages does not host server-side languages, I switched to plain HTML. In addition to that, previous version was using Bootstrap v3.3.1 so, I also changed it to the current version and updated the grid & classes accordingly. Website is partially responsive, since the landing page is full of transitions. So rather than playing with media queries, I preferred to make an extra page to be loaded only if mobile (index-mobile.html). In the previous version, mobile detection was handled by PHP mobile detection class. However, in this version, I used jQuery method despite its downsides<sup>1</sup>. User can enter 6 different types of color profiles. Advanced input field solves many typing mistakes / styles and makes the calculation. If it can't solve the input, it displays an error message with many typing hints. The given input is not only converted, but also becomes the background color. It is important to note that, since background color of the site changes depending on the given color value, it is highly possible to have a readibility issue. To overcome this, I calculate the contrast of the given color and change several text colors to either black or white. Once the input field is cleared, everything goes back to its initial state.
+
 To begin with, since this project enables conversions between 6 different profiles, there are many functions to deal with. Instead of going to through them all, I will only focus on the HEX to RGB conversion. The rest can be found on my [GitHub repository](https://github.com/alitursucular/color-codes-conversion-website-demo).
 
-A hex triplet is a six-digit, three-byte hexadecimal number used in HTML, CSS, SVG, and other computing applications to represent colors.<sup>1</sup> The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue.<sup>2</sup> Before we take a look at HEX to RGB conversion, we first need to validate user input so it can be processed:
+A hex triplet is a six-digit, three-byte hexadecimal number used in HTML, CSS, SVG, and other computing applications to represent colors.<sup>2</sup> The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue.<sup>3</sup> Before we take a look at HEX to RGB conversion, we first need to validate user input so it can be processed:
 
 ```javascript
 // remove all whitespaces and assign to a variable
@@ -111,11 +114,11 @@ var hex_to_rgb_final = "rgb(" + r_hex_to_rgb_final + ", " + g_hex_to_rgb_final +
 $('.rgb-result').attr('value', hex_to_rgb_final); // print to html
 ```
 
-**Bonus note:** For RGB, theoretical bottom value is 0 and upper value is 255. (respectively white and black). White is _#000000_ in HEX; so the conversion leads to `0` for all digits. _#FFFFFF means black in HEX so the conversion is `15 * 16 + 15 = 256` for all digits.
+**Bonus note:** For RGB, theoretical bottom value is 0 and upper value is 255. (respectively white and black). White is `#000000` in HEX; so the conversion leads to _0_ for all digits. `#FFFFFF` means black in HEX so the conversion is _15 * 16 + 15 = 256_ for all digits.
 
-**Sad note:** This project was live in the past (5 years ago) under the domain name of _colorconversion.co_. However, there are many online tools, image editing softwares and code editors gives you flexibility to work with different color profiles. Therefore, I found no business advantage of keeping it live; instead added to my portfolio.
+**Sad note:** This project was live 5 years ago under the domain name of _colorconversion.co_. However, there are many online tools, image editing softwares and code editors gives you flexibility to work with different color profiles. Therefore, I found no business advantage of keeping it live; instead added to my portfolio.
 
-**Note to self:** I found many parts which, could be improved. It is good to review your work and see the progress you made. 
+**Note to self:** I found many parts which, could be improved. It is good to review your work and see the progress you have made. 
 
 Thanks for reading! Please feel free to contact me and share your thoughts.
 
@@ -123,5 +126,7 @@ Here is the [demo](https://alitursucular.github.io/color-codes-conversion-websit
 
 Here is the [GitHub repository](https://github.com/alitursucular/color-codes-conversion-website-demo).
 
-<sup>1</sup> _what is hex linki_.
-<sup>2</sup> _what is rgb linki_.
+<sup>1</sup> _https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device_
+<sup>2</sup> _https://en.wikipedia.org/wiki/Web_colors_
+<sup>3</sup> _https://en.wikipedia.org/wiki/RGB_color_model_
+
