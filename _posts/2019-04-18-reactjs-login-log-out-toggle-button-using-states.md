@@ -9,7 +9,7 @@ React is a modern way of dealing with the view layer by creating reusable UI com
 
 My below project is about building a toggle button using states. This is a fairly simple project but, still a good exercise. The collective knowledge of fundamental concepts enables us to deal with complex projects.
 
-**_Bonus:_** _Also see my post about [fetcihng data from a RESTful API using Fetch API with React](fetching-api-data-with-reactjs.html)_
+**_Bonus:_** _Also see my post about [Fetching data from a RESTful API using Fetch API with React](fetching-api-data-with-reactjs.html)_
 
 I will not dive into details of React structure but, it is important to mention that `state`is a JavaScript object and it holds an information where, can only be managed within the React component. So let's see our first method and explain further:
 
@@ -56,7 +56,7 @@ render() {
 
 Our user triggers this click event by clicking on a `<button></button>` where, the event is being listened for by the _onClick attribute_. When this event occurs, it calls the event handler function which, is `this.toggleMood`. Inside of the body of the event handler, this.setState() is called and the component’s state is changed.
 
-**_Bonus:_** _Also see my post about [fetcihng data from a RESTful API using Fetch API with React](fetching-api-data-with-reactjs.html)_
+**_Bonus:_** _Also see my post about [Fetching data from a RESTful API using Fetch API with React](fetching-api-data-with-reactjs.html)_
 
 Thanks for reading! Please feel free to contact and share your thoughts.
 
