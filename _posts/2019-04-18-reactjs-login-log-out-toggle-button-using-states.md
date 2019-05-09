@@ -62,4 +62,4 @@ Thanks for reading! Please feel free to contact and share your thoughts.
 
 Here is the [demo](https://alitursucular.github.io/reactjs-toggle-button-with-states-demo/).
 
-Here is the [GitHub Repository](https://github.com/alitursucular/reactjs-toggle-button-with-states-demo).
+Here is the [GitHub repository](https://github.com/alitursucular/reactjs-toggle-button-with-states-demo).
