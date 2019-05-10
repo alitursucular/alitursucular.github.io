@@ -64,7 +64,7 @@ constructor(props) {
 
 If we are dealing with states, we always have a constructor method to set the initial state. In our project, we are storing not only the fetched data but also, loading and error states. These extra properties will be used in our `render` method for the sake of _UX_. Since our data arrives asynchronously, it would be a good idea to show a text or a spinning visual to the end user during the wait time.
 
-Notice that we are using `setState` to update our components state. In other words, we are using an external source to set our component's local state! When the data is fetched successfully, it will be stored in the local state. Before we go through our `render` method, let's take a look at how we process the fetched data for display:
+Notice that, we are using `setState` to update our components state. In other words, we are using an external source to set our component's local state! When the data is fetched successfully, it will be stored in the local state. Before we go through our `render` method, let's take a look at how we process the fetched data for display:
 
 ```javascript
 createTable = () => {
@@ -152,7 +152,7 @@ render() {
 
 Our render method first checks for the error property of the component's state. If there is an error, `error.message` stores the problem. (Notice that, `{ ... }` expression is used to inject _JSX_ into _HTML_ in React). Please recall the wait time mentioned above. I simply print a loading text during this wait time. By doing so, the end user is kept informed while the data is being fetched. Once the error is _null_ and isLoaded is _true_, I create the body of the HTML and display our data.
 
-**_Note:_** _This is the most basic block of code for fetching a data from an external source in React. Most larger requests and further processings has a similar core._
+**_Note:_** _This is the most basic block of code for fetching a data from an external source in React. Most larger requests and further processings have a similar core._
 
 **_Bonus:_** _Also see my post about [ReactJS Login / Log Out toggle button using states](https://alitursucular.github.io/reactjs-login-log-out-toggle-button-using-states/)_
 
