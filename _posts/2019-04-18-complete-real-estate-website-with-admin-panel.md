@@ -19,6 +19,8 @@ tags:
     photo upload,
     google analytics,
     user statistics,
+    SEO,
+    webmasters
   ]
 excerpt: "This post is about a complete real estate website with admin panel (Custom build CMS, MySQL and PHP). Unlike most of my other blog posts, this content does not has a GitHub repository."
 ---
@@ -30,6 +32,8 @@ _Note: If you are willing to view the site immediately, please see the [link](ht
 To begin with, this was one of my most comprehensive work. The website is for a real estate firm and they wanted me to make an admin panel where, all of their employees (agents) have their own accounts. The beautiy relies on the back-end. Apart from its front end, I used `PHP` and `MySQL` to power up tons of features.
 
 This customer wanted me to do the entire project. They came up with a real estate template from _Themeforest_ and told me their needs. After several discussions, meetings and planning, I started building the admin panel and configuring their front end template. It is important to note that, I _did not_ use any `library` or `CMS` systems such as WordPress, Drupal or Joomla etc., instead I built my own. Although, it is not directly suitable for other business types, it became a `framework` on its own. I am listing main features with their explanations below:
+
+**_Bonus:_** _Also see my post about [Complete corporate website (with live URL)](https://alitursucular.github.io/complete-corporate-website/)_
 
 - **Add / remove / suspend account, change / reset passwords:** There are two types of accounts. One is a super user, the other one is a regular user account. Only the super user can create both (which is the company owner). Super user has the full control over every account and the website content; except terminating itself. (No need to mention, passwords are `bcrypted` using hashing API and then stored)
 
@@ -46,6 +50,8 @@ This customer wanted me to do the entire project. They came up with a real estat
 All those actions above are attached to a _notification system_ similar to social media sites. So no one misses a task. They are also informed by _automatic emails_. Lastly and obviously, this whole structure requires a database and its management. I used `MySQL` for that. (Established PDO connections to connect PHP to MySQL)
 
 In addition to everything, the site is equipped with meta tags and google analytics. I did all their webmasters work, submitted their sitemaps and ran inspections over the code. Moreover, each link is suitable for social media sharing. If you copy the link and paste it on Facebook or LinkedIn, meta tags do their job, read related information and image regarding to that page.
+
+**_Bonus:_** _Also see my post about [Complete corporate website (with live URL)](https://alitursucular.github.io/complete-corporate-website/)_
 
 Here is the [link](https://www.platinatasehir.com) to the site. Unfortunately you will not be able view above features, since they are on the server side.
 
