@@ -18,7 +18,7 @@ tags:
     knowledge graph,
     SEO
   ]
-excerpt: "Introduction text"
+excerpt: "This post is about a complete corporate website design. Before I begin talking about the site, let me explain how I deal with '_A to Z web development service_' I give."
 ---
 
 This post is about a complete corporate website design. Before I begin talking about the site, let me explain how I deal with '_A to Z web development service_' I give.
