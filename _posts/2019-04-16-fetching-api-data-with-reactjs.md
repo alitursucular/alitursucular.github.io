@@ -6,6 +6,7 @@ tags:
     Fetch API,
     reactJS,
     states,
+    DOM,
     virtual DOM,
     create-react-app,
     JavaScript,
