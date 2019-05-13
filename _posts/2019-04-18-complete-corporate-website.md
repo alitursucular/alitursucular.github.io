@@ -21,6 +21,8 @@ tags:
 excerpt: "This post is about a complete corporate website design work. Before I begin talking about the site, let me explain a little bit about '_A to Z web development service_' I provide first."
 ---
 
+For quick starters, here is the [link](http://www.depack.com.tr/en/) to the site.
+
 This post is about a complete corporate website design work. Before I begin talking about the site, let me explain a little bit about '_A to Z web development service_' I provide first.
 
 _If you are willing to view the site immediately, please see the [site](http://www.depack.com.tr/en/)._ **_Once you open the page, please go through developer tools of your browser and see my mark at the beginning of the HTML._**

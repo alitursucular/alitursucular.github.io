@@ -17,6 +17,8 @@ tags:
 excerpt: "This project simply shows fetching data from a RESTful API (https://exchangeratesapi.io/). Once data is fetched, we filter our results and create a dynamic table element to display."
 ---
 
+Here is the [demo](https://alitursucular.github.io/fetching-api-data-with-reactjs-demo/) and [GitHub repository](https://github.com/alitursucular/fetching-api-data-with-reactjs-demo).
+
 As I mentioned in my other React related posts, there are a few reasons why I prefer to use React. It is fast, modular and scalable. It enables you to have smaller and reusable files rather than having dense files of code. There are many projects out there that use React. Although many of them don't require the power of React, people are still using it to explore and understand it for further use. [Here](https://reactjs.org/tutorial/tutorial.html) is the official url where, you could start exploring.
 
 This project simply shows fetching data from a RESTful API (_https://exchangeratesapi.io/_). This foreign exchange rates API allows us to retrieve current and historical foreign exchange rates published by the European Central Bank. Although, there are many types of queries mentioned on their website, we will be using `latest?base=GBP` as for the _query string_ to keep this project simple. (Note that, base currency is set to GBP so, other listed currencies are based on GBP). Since we are bringing in a real world data and playing with it, I consider this project is a bit more complex than staying in the local environment. Once data is fetched, we filter our results and create a dynamic _table_ element to display.

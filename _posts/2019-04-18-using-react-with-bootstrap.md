@@ -19,7 +19,10 @@ tags:
   ]
 excerpt: "This project is only about adding Bootstrap to React (integrating Bootstrap with React apps) and creating a basic grid for further projects. I will not be discussing about React basics like i did in my other posts."
 ---
-### Introduction
+
+Here is the [demo](https://alitursucular.github.io/using-react-with-bootstrap-demo/) and [GitHub repository](https://github.com/alitursucular/using-react-with-bootstrap-demo).
+
+**Introduction**
 
 This project is only about adding Bootstrap to React (integrating Bootstrap with React apps) and creating a basic grid for further projects. I will not be discussing about React basics like i did in my other posts _[Fetching data from a RESTful API using Fetch API with React](https://alitursucular.github.io/fetching-api-data-with-reactjs/)_ and _[ReactJS Login / Log Out toggle button using states](https://alitursucular.github.io/reactjs-login-log-out-toggle-button-using-states/)_
 
@@ -27,7 +30,7 @@ React is one of the most popular JavaScript libraries for interactive web applic
 
 In React, for every _DOM object_, there is a corresponding _"virtual DOM object."_ A virtual DOM object is a representation of a DOM object, like a lightweight copy. Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, because nothing gets drawn onscreen. When we render a _JSX element_, every single virtual DOM object gets updated. Once the virtual DOM has updated, then React compares the virtual DOM with a virtual DOM snapshot that was taken right before the update. Therefore, React figures out exactly which virtual DOM objects have changed. After this comparison, React knows which virtual DOM objects have changed so, it only updates those objects in the _real DOM_. (changes on the real DOM results the screen to change).
 
-### React Bootstrap
+**React Bootstrap**
 
 _Bootstrap_ is one of the most popular _CSS Frameworks_ for developing responsive and mobile-first websites. If we need to use React with Bootstrap, we cannot simply include a 'ready to go' script to our pages and start using. The [official documentation of React](https://facebook.github.io/create-react-app/docs/adding-bootstrap) clearly explains how we can add Bootstrap:
 

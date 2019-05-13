@@ -5,6 +5,8 @@ tags: [HTML5, CSS3, JavaScript, color codes, conversion, HEX, RGB, CMYK]
 excerpt: "I love math and I enjoy diving into the logic of things that I use. Color codes are one of them. Every color can be represented by different types and each type has different properties/areas of usage."
 ---
 
+Here is the [demo](https://alitursucular.github.io/color-codes-conversion-website-demo/) and [GitHub repository](https://github.com/alitursucular/color-codes-conversion-website-demo).
+
 I love math and I enjoy diving into the logic of things that I use. Color codes are one of them. Every color can be represented by different types and each type has different properties/areas of usage. (For example in web development, we generally use HEX and RGB(a),while offset printing uses CMYK) So the question came to my mind; what's the math behind it? _Note that: I am not an expert on color profiles, I am only interested in the conversion math._
 
 **The UI:**

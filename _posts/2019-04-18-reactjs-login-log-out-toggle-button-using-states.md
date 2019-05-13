@@ -5,6 +5,8 @@ tags: [React, toggle button, states, JavaScript, binding, methods, JSX, git, Git
 excerpt: "React is a modern way of dealing with the view layer by creating reusable UI components. This project is about building a toggle button using states. This is a fairly simple project but, still a good exercise. The collective knowledge of fundamental concepts enables us to deal with complex projects."
 ---
 
+Here is the [demo](https://alitursucular.github.io/reactjs-toggle-button-with-states-demo/) and [GitHub repository](https://github.com/alitursucular/reactjs-toggle-button-with-states-demo).
+
 React is a modern way of dealing with the view layer by creating reusable UI components. As I mentioned in my other React related posts, there are a few reasons why I prefer to use React. First of all, it is fast. It can handle complex updates very quickly. Apps that have a lot of changing data is where you actually realize the beauty (At this point it is very clear why Facebook needed to develop React). Secondly, React is modular and scalable. It enables you to have smaller and reusable files rather than having dense files of code. Lastly, React happens to be popular! There are many projects out there that use React. Although many of them don't require the power of React, people are still using it to explore and understand it for further use. [Here](https://reactjs.org/tutorial/tutorial.html) is the official url where, you could start exploring.
 
 My below project is about building a toggle button using states. This is a fairly simple project but, still a good exercise. The collective knowledge of fundamental concepts enables us to deal with complex projects.

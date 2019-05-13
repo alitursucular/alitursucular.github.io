@@ -5,6 +5,8 @@ tags: [CSS, keyframes, bezier curves, flex layout]
 excerpt: "This project simulates a ball falling from a height. In order to make the animation more realistic, I showed the shape change at the moment of impact and the decreasing height due to friction."
 ---
 
+Here is the [demo](https://alitursucular.github.io/bouncing-ball-with-CSS-keyframes-demo/) and [GitHub repository](https://github.com/alitursucular/bouncing-ball-with-CSS-keyframes-demo).
+
 This project simulates a ball falling from a height. In order to make the animation more realistic, I showed the shape change at the moment of impact and the decreasing height due to friction.
 
 The _@keyframes_ CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.<sup>1</sup>

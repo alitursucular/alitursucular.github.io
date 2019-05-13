@@ -25,6 +25,8 @@ tags:
 excerpt: "This post is about a complete real estate website with admin panel (Custom build CMS, MySQL and PHP). Unlike most of my other blog posts, this content does not has a GitHub repository."
 ---
 
+For quick starters, here is the [link](https://www.platinatasehir.com) to the site.
+
 This post is about a complete real estate website with admin panel. Unlike most of my other blog posts, this content does not has a GitHub repository. It is because it was a private work to a customer. Nevertheless, I will be discussing the work I did in the following sections.
 
 _Note: If you are willing to view the site immediately, please see the [link](https://www.platinatasehir.com)._ **_Once you open the page, please go through developer tools of your browser and see my mark at the beginning of the HTML._**

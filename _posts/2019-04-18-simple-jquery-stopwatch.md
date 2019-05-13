@@ -5,6 +5,8 @@ tags: [JavaScript, jQuery, Date(), google fonts]
 excerpt: "I decided to use JavaScript date function at the core of this project. The main logic is; once the start button is pressed, the date value of that moment is stored. Every 10 ms, this stored value is subtracted from the current date value."
 ---
 
+Here is the [demo](https://alitursucular.github.io/simple-jquery-stopwatch-demo/) and [GitHub repository](https://github.com/alitursucular/simple-jquery-stopwatch-demo).
+
 I would call this stopwatch example as oldies but goldies. I am seeing a similar demonstration on many portfolio pages and I also wanted make one. The coding was fun and a bit tricky. As I do in most of my projects, I began searching the net and analyzing different codes / web technologies. Although there are modern ways of doing such stopwatch, I sticked with jQuery since I wanted to include jQuery in my portfolio.
 
 It is important to note that, I haven't used any plug and play libraries to make it. However, if this was a tiny part of a larger project, I would have seen no harm using so. (for time and resouce optimization)
