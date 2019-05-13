@@ -4,7 +4,8 @@ permalink: /about/
 read_time: false
 ---
 
-Hi! Welcome to my GitHub Pages! I am a Full Stack Web Developer in London, UK!
+Hi! Welcome to my GitHub Pages!
+I am a Full Stack Web Developer in London, UK!
 
 I have a bachelor’s degree in Mechatronics Engineering and a master’s degree in Business Administration (MBA). (Please refer to my [resume](https://alitursucular.github.io/assets/docs/alitursucular-full-stack-developer-resume.pdf) for details) I started programming in high school with Excel VBA. My very first project was a multiple-choice exam score calculator. Upon starting university, I took basic to in-depth programming courses along with my other core engineering classes. In my sophomore year, I was introduced to Web Development. Ever since, I was involved in tons of assignments and projects. This GitHub Page intends to present my _Full Stack Web Developer_ skills, show some examples of past projects and partial demonstrations of several web technologies that I enjoy using.
 
