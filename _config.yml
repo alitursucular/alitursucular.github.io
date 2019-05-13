@@ -76,7 +76,7 @@ google:
   search_engine_id: # YOUR_SEARCH_ENGINE_ID
   instant_search: # false (default), true
 # SEO Related
-google_site_verification:
+google_site_verification: swd0jayjJdjDMu5mFfgszRKi5GGsQQgQ2t_XOPtw36E
 bing_site_verification:
 yandex_site_verification:
 naver_site_verification:
@@ -213,7 +213,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
