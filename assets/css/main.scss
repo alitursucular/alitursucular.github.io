@@ -29,4 +29,15 @@ html {
     .page__content p, .page__content li, .page__content dl {
         font-size: 0.9em;
     }
+
+    @media (min-width: 37.5em) {
+      .page__hero--overlay .page__title {
+        font-size: 1.5em;
+        margin-bottom: 0;
+      }
+    }
+
+    .page__hero--overlay {
+      padding: 2em 0;
+    }
   }
