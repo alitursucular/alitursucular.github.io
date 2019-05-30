@@ -1,5 +1,5 @@
 ---
-title: "Using React with Bootstrap (react-bootstrap)"
+title: "Spotify Playlists Quiz with React"
 date: 2019-05-29
 tags:
   [
@@ -17,7 +17,7 @@ tags:
     Spotify API,
     Single Page Application (SPA)
   ]
-excerpt: "This app generates a simple quiz based on user's Spotify playlists."
+excerpt: "This React app generates a simple quiz based on user's Spotify playlists. It features connecting to Spotify Web API, accessing provided data, extracting useful information from that data and generating multiple choice questions."
 ---
 
 Here is the [demo](https://alitursucular.github.io/spotify-playlists-quiz-with-react-demo/) and [GitHub repository](https://github.com/alitursucular/spotify-playlists-quiz-with-react-demo).
