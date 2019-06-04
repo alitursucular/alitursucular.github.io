@@ -1,7 +1,7 @@
 {
-  "name": "minimal-mistakes",
+  "name": "alitursucular.github.io",
   "version": "4.15.2",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
+  "description": "Full Stack Web Developer Portfolio",
   "repository": {
     "type": "git",
     "url": "git://github.com/mmistakes/minimal-mistakes.git"
@@ -11,7 +11,7 @@
     "theme",
     "minimal"
   ],
-  "author": "Michael Rose",
+  "author": "Ali Tursucular",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mmistakes/minimal-mistakes/issues"
