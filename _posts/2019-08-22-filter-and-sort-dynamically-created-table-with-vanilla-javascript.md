@@ -213,14 +213,14 @@ _See my other posts: [Spotify Playlists Quiz with React](https://alitursucular.g
 
 Here are several references and great reads related to this project:
 
-- [HTMLCollection, NodeList and array of objects](https://hackernoon.com/htmlcollection-nodelist-and-array-of-objects-da42737181f9).
-- [Content Security Policy Reference](https://content-security-policy.com/).
-- [Looping through objects in JavaScript](https://zellwk.com/blog/looping-through-js-objects/).
-- [JavaScript Array sort() Method (w3schools.com)](https://www.w3schools.com/jsref/jsref_sort.asp).
-- [String.prototype.localeCompare()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare).
-- [How TO - Sort a Table (w3schools.com)](https://www.w3schools.com/jsref/jsref_sort.asp).
-- [YouTube - Build A Filterable List With Vanilla JavaScript](https://www.youtube.com/watch?v=G1eW3Oi6uoc).
-- [Bubbly](https://leaverou.github.io/bubbly/).
+- [HTMLCollection, NodeList and array of objects](https://hackernoon.com/htmlcollection-nodelist-and-array-of-objects-da42737181f9)
+- [Content Security Policy Reference](https://content-security-policy.com/)
+- [Looping through objects in JavaScript](https://zellwk.com/blog/looping-through-js-objects/)
+- [JavaScript Array sort() Method (w3schools.com)](https://www.w3schools.com/jsref/jsref_sort.asp)
+- [String.prototype.localeCompare()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
+- [How TO - Sort a Table (w3schools.com)](https://www.w3schools.com/jsref/jsref_sort.asp)
+- [YouTube - Build A Filterable List With Vanilla JavaScript](https://www.youtube.com/watch?v=G1eW3Oi6uoc)
+- [Bubbly](https://leaverou.github.io/bubbly/)
 
 Thank you for reading! Your thoughts and comments are always welcome.
 
