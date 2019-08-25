@@ -1,6 +1,6 @@
 ---
 title: "Filter and sort a dynamically created table with Vanilla JavaScript"
-date: 2019-08-22
+date: 2019-08-25
 tags:
   [
     Filter,
