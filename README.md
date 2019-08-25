@@ -1,4 +1,6 @@
-Hi! Welcome to my GitHub Pages!
+# Hello!
+
+Welcome to my GitHub Pages!
 
 This GitHub page [https://alitursucular.github.io](https://alitursucular.github.io/) intends to present my skills and services, show some examples of past projects and partial demonstrations of several web technologies that I enjoy using.
 
