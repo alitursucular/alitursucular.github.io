@@ -15,16 +15,16 @@ tags:
     git,
     GitHub,
   ]
-excerpt: ""
+excerpt: "This mini Vanilla JS project is about dynamically creating a table, which is filterable and sortable. We managed to perform these operations by resorting to several amazing JavaScript higher-order functions."
 ---
 
 Here is the [demo](https://alitursucular.github.io/filter-and-sort-dynamically-created-table-with-vanilla-javascript-demo/) and [GitHub repository](https://github.com/alitursucular/filter-and-sort-dynamically-created-table-with-vanilla-javascript-demo).
 
 **Overview**
 
-This mini Vanilla JS project is about dynamically creating a table, which is filterable and sortable. We managed to perform these operations by resorting to several amazing JavaScript higher order functions.
+This mini Vanilla JS project is about dynamically creating a table, which is filterable and sortable. We managed to perform these operations by resorting to several amazing JavaScript higher-order functions.
 
-From time to time, I enjoy dealing with this kind of projects because these kinds of functions are always handy when we are dealing with a larger project (as they are being part of it). Besides, once we shift our focus to mini projects, we generally practice & improve our skills, discover extended use cases and produce our code in various forms. Before we jump into the code, let's list what we have in this mini Vanilla JS project:
+From time to time, I enjoy dealing with this kind of projects because these kinds of functions are always handy when we are dealing with a larger project (as they are being part of it). Besides, once we shift our focus to mini-projects, we generally practice & improve our skills, discover extended use cases and produce our code in various forms. Before we jump into the code, let's list what we have in this mini Vanilla JS project:
 
 - Dynamically creating a table using `order.js` as our data source.
 - Making our table filterable
@@ -32,11 +32,11 @@ From time to time, I enjoy dealing with this kind of projects because these kind
 - Informative _speech bubbles_ with some cool effects.
 - Handling error & flashing `thead` on hover
 
-_Note: This mini projects mainly focuses on JavaScript rather than the layout. We included Bootstap, Font Awesome and several media queries just for to have a clean UI. We will not be discussing those since it is not in the scope._
+_Note: This mini-project mainly focuses on JavaScript rather than the layout. We included Bootstrap, Font Awesome and several media queries just to have a clean UI. We will not be discussing those since it is not in the scope._
 
 **Code Breakdown**
 
-After creating our basic layout, let's continue with our data source, `order.js`. We have data in JSON format, as if its's being fetched from an external source. In order to use our table data, we export the module, then import in `index.js` file.
+After creating our basic layout, let's continue with our data source, `order.js`. We have data in JSON format as if it's being fetched from an external source. In order to use our table data, we export the module, then import in `index.js` file.
 
 Our _order.js_:
 
@@ -76,11 +76,11 @@ As it is stated in [documentation](https://developer.mozilla.org/en-US/docs/Web/
 <script type="module" src="js/index.js" />
 ```
 
-**Speech bubbles**
+**Speech Bubbles:**
 
-Before we jump in to the table creation, let's take a look at how we manage speech bubbles. We have two speech bubbles on our page. Their only responsibility is to point out an action that user can take. The one points to the input field (on the left) only swings. However, the one on the right has two _EventListener_ s attached, _mouseover_ and _mouseout_. Once mouseover event is triggered, we simply add a class to the _thead_ element of our table. This class makes a flash effect over _thead_ twice to inform users that they can sort those columns. Both swing and flash effects are coded in pure _CSS_ with the help of _@keyframes_.
+Before we jump into the table creation, let's take a look at how we manage speech bubbles. We have two speech bubbles on our page. Their only responsibility is to point out an action that the user can take. The one points to the input field (on the left) only swings. However, the one on the right has two _EventListener_ s attached, _mouseover_ and the _mouseout_. Once mouseover event is triggered, we simply add a class to the _thead_ element of our table. This class makes a flash effect over _thead_ twice to inform users that they can sort those columns. Both swing and flash effects are coded in pure _CSS_ with the help of _@keyframes_.
 
-**Creating table**
+**Creating Table:**
 
 ```javascript
 orders.forEach(order => {
@@ -115,9 +115,9 @@ The logic of the above code is as follows:
 3. Insert a new row to tbody as the last row and give a class name of _order_,
 4. Loop through values of the current order, insert a cell for each, add their classes and, finally set the content.
 
-Along with the logic, there is also a _switch statement_ in the for loop. That statement is responsible for addition of proper UI classes. Since we know all _status types_ of orders, we style them accordingly. Lastly, other than Bootstrap text classes, we added _order_ class for each row and _order-item_ class for each cell. These classes will be used in filter and sort functions.
+Along with the logic, there is also a _switch statement_ in the for/of statement. That statement is responsible for the addition of proper UI classes. Since we know all _status types_ of orders, we style them accordingly. Lastly, other than Bootstrap text classes, we add an _order_ class for each row and _order-item_ class for each cell. These classes will be used in filter and sort functions.
 
-**Filter function**
+**Filter Function:**
 
 ```javascript
 let filterInput = document.querySelector(".filter-input");
@@ -151,12 +151,12 @@ The logic of the filter function is as follows:
 1. Get the input element and every row that has order class within the HTML,
 2. Convert to uppercase and remove white spaces,
 3. Add an EventListener to the input and execute the filter function,
-4. For each row: get innerHTML, convert to uppercase and look for match (index) of the given input,
+4. For each row: get innerHTML, convert to uppercase and look for a match (index) of the given input,
 5. Add style of _display: none;_ for each mismatch. (We will use the help of this class in sort too)
 6. If nothing matches, display the error message and hide the speech bubble on the right. (Since there is nothing to be sorted).
 7. Reset these helper styles to defaults on each iteration.
 
-**Sort function**
+**Sort Function:**
 
 ```javascript
 let sortDirection;
@@ -197,7 +197,7 @@ For some reason, I enjoyed coding this sort function very much. Almost every app
 
 1. We have a _click_ EventListener for each _th_ element, so we would know which column to sort, (thanks to the _idx_ parameter)
 2. On each click, we reverse the sort direction with the help of _sortDirection boolean_,
-3. We make an array of rows that has 'order' class and whose style is NOT 'none'. (This is because user may have filtered before and, wants to sort afterwards).
+3. We make an array of rows that has 'order' class and whose style is NOT 'none'. (This is because the user may have filtered before and, wants to sort afterward).
 4. Here comes the combined power of _sort_ and _localeCompare_. We pass a and b parameters as if they are two elements to be compared in the selected column. LocaleCompare accepts two strings to be compared. Therefore, we access the actual values for that row and return the result. It is important to note that, we added a couple more parameters to the localeCompare to have a proper working sort function. (`"en", { numeric: true, sensitivity: "base" }`).
 5. Lastly, chained _forEach()_ method loops through each sorted row and inserts them one after another by moving the current node to a new position (depending on the sortDirection we set above).
 
@@ -206,10 +206,10 @@ _See my other posts: [Spotify Playlists Quiz with React](https://alitursucular.g
 **Further Developments**
 
 - **Multiple filter arguments:** Our filter function looks for the exact match of the given input. For now, it is not a problem since our data set consists of only 15 rows. However, it can get messy. Let's assume that we need the id of customer James, who spent £380. Our best approach would be to type either _James_ or _£380_. Searching by James will return only 2 rows and, it easy to see which row has £380 in subtotal. However, what if our data set had thousands of rows and hundreds of customers named James? Since our algorithm doesn't accept multiple arguments, our code is not the most ideal code to be used in huge data sets.
-- **Sort icons:** Depending on ascending / descending, the general sort icon could be changed to a directional icon.
+- **Sort icons:** Depending on ascending/descending, the general sort icon could be changed to a directional icon.
 - **Sort type:** Rather than clicking on table headers, we could place dropdown buttons to easily select the sort type. By doing so, we could create more / custom sorting options for each column.
-- **Error messages:** As it is discussed above, we currently inform user with _No results were found..._ error text. Along with doing so, we can also add a helper function, which provides suggestions. (For example: _Did you mean 'James' ?_ or _Try again with shorter filter text_ etc.)
-- **Fetching data:** Basically, this could be one of the best improvements for this project. In real life, we get data from external sources. To achieve that, first step would be to use a _fake online REST API for testing and prototyping_ service such as [JSONPlaceholder](https://jsonplaceholder.typicode.com/). Once we successfully implement it, we can create our own REST microservice as a second step.
+- **Error messages:** As it is discussed above, we currently inform the user with _No results were found..._ error text. Along with doing so, we can also add a helper function, which provides suggestions. (For example: _Did you mean 'James' ?_ or _Try again with shorter filter text_ etc.)
+- **Fetching data:** Basically, this could be one of the best improvements for this project. In real life, we get data from external sources. To achieve that, the first step would be to use a _fake online REST API for testing and prototyping_ service such as [JSONPlaceholder](https://jsonplaceholder.typicode.com/). Once we successfully implement it, we can create our own REST microservice as a second step.
 
 Here are several references and great reads related to this project:
 
@@ -219,7 +219,7 @@ Here are several references and great reads related to this project:
 - [JavaScript Array sort() Method (w3schools.com)](https://www.w3schools.com/jsref/jsref_sort.asp).
 - [String.prototype.localeCompare()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare).
 - [How TO - Sort a Table (w3schools.com)](https://www.w3schools.com/jsref/jsref_sort.asp).
-- [\* YouTube - Build A Filterable List With Vanilla JavaScript - Traversy Media](https://www.youtube.com/watch?v=G1eW3Oi6uoc).
+- [YouTube - Build A Filterable List With Vanilla JavaScript](https://www.youtube.com/watch?v=G1eW3Oi6uoc).
 - [Bubbly](https://leaverou.github.io/bubbly/).
 
 Thank you for reading! Your thoughts and comments are always welcome.
