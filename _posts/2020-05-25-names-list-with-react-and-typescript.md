@@ -20,6 +20,9 @@ tags:
     Single Page Application (SPA)
   ]
 excerpt: "A basic React - TypeScript app that allows users to add and remove names to and from a list. A user could also randomly pick from the list without picking the same name twice in a row."
+header:
+  overlay_image: /assets/images/names-list-with-react-and-typescript-blog-background.jpg
+  #og_image: /assets/images/page-header-og-image.png
 ---
 
 Here is the [demo](https://alitursucular.github.io/names-list-with-react-and-typescript-demo/) and [GitHub repository](https://github.com/alitursucular/names-list-with-react-and-typescript-demo).
@@ -28,7 +31,7 @@ Here is the [demo](https://alitursucular.github.io/names-list-with-react-and-typ
 
 This is a basic React - TypeScript app that allows users to add and remove names to and from a list. A user could also randomly pick from the list without picking the same name twice in a row.
 
-After my contract with Macmillan Cancer Support (London, UK) was over, I started to apply for freelance projects while searching for my next opportunity. Creating this mini-app was the Front end code test of one of the freelance applications and I was given 48 hours to complete. It wasn't a hard egg to crack, but still, a good way to practice some basics while challenging against time. Ok then, let's begin with checkpoints to be accomplished and then dive into the code:
+After my contract with Macmillan Cancer Support (London, UK) was over, I started to apply for freelance projects while searching for my next opportunity. Creating this mini-app was the Front end code test of one of my freelance applications and I was given 48 hours to complete. It wasn't a hard egg to crack, nevertheless, it was fun to practice some basics while challenging against time. Ok then, let's begin with checkpoints to be accomplished, and then dive into the code:
 
 - The app must be developed using React and TypeScript
 - User should be able to add and remove names to and from a list
@@ -65,6 +68,7 @@ It wasn't required to have any type of styling over the app, but I wanted to pre
     - initialNames.ts
     - types.d.ts
 ```
+
 
 **Code Breakdown**
 
@@ -113,7 +117,7 @@ export default App;
 
 _I only put the return method of the App.tsx in the above snippet, but we will come back for states and other functions in a minute._
 
-Our App component renders 6 components in total. `<Header />`, `<Footer />` and `<GitHubCorner />` components only return the necessary UI markup for their bits without any props or state. On the other hand, `<AddListItem />`, `<List />` and `<PickRandomListItem />` deal with the data, where the UI is rendered based on their props or states. To begin with, I have created a pre-populated JSON array, each having id and text. This array of objects forms our initial state:
+Our App component renders 6 components in total. `<Header />`, `<Footer />` and `<GitHubCorner />` only return the necessary UI markup for their bits without any props or state. On the other hand, `<AddListItem />`, `<List />` and `<PickRandomListItem />` deal with the data, where the UI is rendered based on their props or state. To begin with, I have created a pre-populated JSON array, each having id and text. This array of objects forms our initial state:
 
 ```javascript
 import { v4 as uuidv4 } from 'uuid';
