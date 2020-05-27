@@ -1,9 +1,8 @@
 ---
 title: "Names list with React and TypeScript"
 header:
-  image: /assets/images/names-list-with-react-and-typescript-blog-background.jpg
-  #og_image: /assets/images/page-header-og-image.png
-date: 2020-05-25
+  image: /assets/images/names-list-with-react-and-typescript-blog.jpg
+  og_image: /assets/images/names-list-with-react-and-typescript-social.jpg
 tags:
   [
     React,
@@ -69,7 +68,6 @@ It wasn't required to have any type of styling over the app, but I wanted to pre
     - initialNames.ts
     - types.d.ts
 ```
-
 
 **Code Breakdown**
 
@@ -244,7 +242,7 @@ const removeName: RemoveName = id => {
 }
 ```
 
-> The filter() method creates a new array with all elements that pass the test implemented by the provided function. - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+> The filter() method creates a new array with all elements that pass the test implemented by the provided function. <cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">MDN</a></cite>
 
 
 **AddListItem Component**
