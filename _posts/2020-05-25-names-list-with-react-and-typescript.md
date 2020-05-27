@@ -1,5 +1,8 @@
 ---
 title: "Names list with React and TypeScript"
+header:
+  image: /assets/images/names-list-with-react-and-typescript-blog-background.jpg
+  #og_image: /assets/images/page-header-og-image.png
 date: 2020-05-25
 tags:
   [
@@ -20,9 +23,7 @@ tags:
     Single Page Application (SPA)
   ]
 excerpt: "A basic React - TypeScript app that allows users to add and remove names to and from a list. A user could also randomly pick from the list without picking the same name twice in a row."
-header:
-  overlay_image: /assets/images/names-list-with-react-and-typescript-blog-background.jpg
-  #og_image: /assets/images/page-header-og-image.png
+# last_modified_at: 2020-05-27T16:00:52-04:00
 ---
 
 Here is the [demo](https://alitursucular.github.io/names-list-with-react-and-typescript-demo/) and [GitHub repository](https://github.com/alitursucular/names-list-with-react-and-typescript-demo).
