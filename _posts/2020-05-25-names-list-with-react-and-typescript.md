@@ -1,8 +1,8 @@
 ---
 title: "Names list with React and TypeScript"
 header:
-  image: /assets/images/names-list-with-react-and-typescript-blog.jpg
-  og_image: /assets/images/names-list-with-react-and-typescript-social.jpg
+  image: /assets/images/names-list-with-react-and-typescript-blog-post.jpg
+  og_image: /assets/images/names-list-with-react-and-typescript-social-share.jpg
 tags:
   [
     React,
