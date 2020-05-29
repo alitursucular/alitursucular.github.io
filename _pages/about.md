@@ -19,4 +19,4 @@ I wanted to learn how businesses are established and maintained around ideas and
 
 Over the years, I have managed to practice my coding in various projects and business ventures. I made loads of mistakes that I am proud of because I learned a lot from them. Every business comes with its unique challenges and we should be fearless to adapt to the evolving web development world!
 
-Well, please feel free to contact me through: **alitursucular@gmail.com**
+Well, please feel free to contact me through: **[alitursucular@gmail.com](mailto:alitursucular@gmail.com)**
