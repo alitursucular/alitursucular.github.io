@@ -20,7 +20,7 @@ title                    : "alitursucular.github.io"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ali Turşucular"
-description              : "An amazing website."
+description              : "Welcome to my GitHub Pages! I am a Front End Engineer and a contractor in London, UK" # Both the regular and the og:description
 url                      : "https://alitursucular.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "alitursucular/alitursucular.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
