@@ -11,4 +11,4 @@ This GitHub page [https://alitursucular.github.io](https://alitursucular.github.
 Company name: **Pinecone Software Limited**<br/>
 Company number: **12004735**<br/>
 Company website: **[https://pineconesoftware.co.uk/](https://pineconesoftware.co.uk/)**<br/>
-Feel free to contact me through: **alitursucular@gmail.com**, **[CV](assets/docs/alitursucular-front-end-engineer-cv.pdf)**
+Feel free to contact me through: **alitursucular@gmail.com**, **[CV](assets/docs/alitursucular-senior-frontend-engineer-cv.pdf)**
