@@ -6,7 +6,7 @@ read_time: false
 
 Hi! Welcome to my GitHub Pages.
 
-I am a Front End Engineer in London, UK! I am operating under my limited company, Pinecone Software Limited. I currently provide contract, freelance and project-based web services. I love to observe, research, think, and solve problems and output great work that is
+I am a Senior Front End Engineer in London, UK! I am operating under my limited company, Pinecone Software Limited. I currently provide contract, freelance and project-based web services. I love to observe, research, think, and solve problems and output great work that is
 excellent in design and functionality. I am also a manufacturing enthusiast, skier, and guitarist.
 
 > This website intends to present my web development skills and services, show some examples of past projects, and partial demonstrations of several web technologies that I enjoy using. I have been constructing my posts having fellow developers in mind, and walk through my development process in detail.
