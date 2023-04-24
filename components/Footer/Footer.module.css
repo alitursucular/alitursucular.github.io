@@ -1,0 +1,91 @@
+.footer {
+    position: relative;
+    font-size: 14px;
+    color: #303030;
+    text-align: center;
+    padding-top: 48px;
+    margin-bottom: 48px;
+}
+
+/* social links */
+.footer .socialLinks {
+    margin: 18px 0 30px 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+.footer .socialLinks li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 42px;
+    color: #f06000;
+}
+
+.footer .socialLinks li a {
+    color: #525252;
+}
+
+.footer .socialLinks li a:hover {
+    color: #fff;
+}
+
+.footer .socialLinks li:first-child {
+    margin-left: 0;
+}
+
+/* copyright */
+.footer .copyright {
+    margin: 0;
+    padding: 0;
+}
+
+.footer .copyright li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+
+.footer .copyright li:before {
+    content: "\2022";
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #095153;
+}
+
+.footer .copyright li:first-child:before {
+    display: none;
+}
+
+/* Go To Top Button */
+#goTop {
+    display: inline-flex;
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    margin-left: -30px;
+}
+
+#goTop .icon {
+    width: 60px;
+    height: 60px;
+    transition: all 0.2s ease-in-out;
+    font-size: 21px;
+    border-radius: 100%;
+    color: white;
+    background-color: gray;
+    /* border: 0; */
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+
+}
+
+#goTop .icon:hover {
+    background-color: #0f9095;
+}

@@ -1,0 +1,16 @@
+.imagesContainer {
+    display: flex;
+    height: 100%;
+    border: 5px solid black;
+    position: relative;
+    cursor: none;
+    /* padding: 5px; */
+    border-radius: 16px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.pixelatedStyle {
+    /* position: relative; */
+    cursor: none !important;
+}
