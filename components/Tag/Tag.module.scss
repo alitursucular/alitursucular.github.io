@@ -1,0 +1,55 @@
+.tag {
+    // display: inline-flex;
+    white-space: nowrap !important;
+    border: 1px solid black;
+    color: black;
+    padding: 2px 8px;
+    font-size: 85%;
+    border-radius: 32px;
+    line-height: 18px;
+    margin-bottom: 8px;
+
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+    // flex: "0 0 auto";
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.tagsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+// .repoColumns {
+//     -webkit-column-count: 3;
+//     -moz-column-count: 3;
+//     column-count: 3;
+//     -webkit-column-gap: 1.25rem;
+//     -moz-column-gap: 1.25rem;
+//     column-gap: 1.25rem;
+//     orphans: 1;
+//     widows: 1;
+// }
+
+// .card {
+//     position: relative;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+//     min-width: 0;
+//     word-wrap: break-word;
+//     background-color: #fff;
+//     background-clip: border-box;
+//     border: 1px solid rgba(0,0,0,.125);
+//     border-radius: 0.25rem;
+
+//     display: inline-block;
+//     width: 100%;
+//     margin-bottom: 0.75rem;
+// }

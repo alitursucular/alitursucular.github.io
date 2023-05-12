@@ -1,0 +1,110 @@
+.repos {
+    padding: 48px 0 32px;
+}
+
+.repoColumns {
+    // -webkit-column-count: 3;
+    // -moz-column-count: 3;
+    // column-count: 3;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+
+    @media (min-width: 576px) {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    @media (min-width: 768px) {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    @media (min-width: 992px) {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+.repoCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // min-width: 0;
+    word-wrap: break-word;
+    // background-clip: border-box;
+    border: 1px solid black;
+    // color: #d1e1e2;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+    // background-color: blue;
+    
+    &:hover {
+        animation: change-background 0.4s infinite linear;
+    }
+    
+    &_link {
+        color: black;
+        text-decoration: none;
+    }
+
+    &_title {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    &_description {
+        font-size: 16px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-top: 8px;
+    }
+
+    @media (min-width: 576px) {
+        display: inline-block;
+    }
+}
+
+@keyframes change-background {
+    0% {
+        background: repeating-conic-gradient(
+            from 45deg at 10% 50%,
+            rgba(0, 176, 153, 0.1) 20deg 30deg,
+            rgba(0, 176, 153, 0.2) 30deg 40deg,
+            rgba(0, 176, 153, 0.3) 40deg 50deg
+        );
+    }
+    33% {
+        background: repeating-conic-gradient(
+            from 45deg at 10% 50%,
+            rgba(0, 176, 153, 0.1) 40deg 50deg,
+            rgba(0, 176, 153, 0.2) 50deg 60deg,
+            rgba(0, 176, 153, 0.3) 60deg 70deg
+        );
+    }
+    67% {
+        background: repeating-conic-gradient(
+            from 45deg at 10% 50%,
+            rgba(0, 176, 153, 0.1) 60deg 70deg,
+            rgba(0, 176, 153, 0.2) 70deg 80deg,
+            rgba(0, 176, 153, 0.3) 80deg 90deg
+        );
+    }
+    100% {
+        background: repeating-conic-gradient(
+            from 45deg at 10% 50%,
+            rgba(0, 176, 153, 0.1) 20deg 30deg,
+            rgba(0, 176, 153, 0.2) 30deg 40deg,
+            rgba(0, 176, 153, 0.3) 40deg 50deg
+        );
+    }
+}

@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-// import styles from "./layout.module.css";
-// import utilStyles from "../styles/utils.module.css";
+// import styles from "./layout.module.scss";
+// import utilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
 
 export const siteTitle = "Ali Tursucular GitHub blog website";
 
-const Layout: React.FC<{ children: React.ReactNode; home?: boolean }> = ({ children, home }) => {
+const Layout: React.FC<{ children: React.ReactNode; home: boolean }> = ({ children, home }) => {
     return (
         <>
             <Head>
@@ -21,20 +21,6 @@ const Layout: React.FC<{ children: React.ReactNode; home?: boolean }> = ({ child
             <header>
                 <Navigation home={home} />
             </header>
-            {/* <header>
-                <Link href="/">
-                    alitursucular.github.io
-                    <Image
-                        priority
-                        src="/images/pinecone-software-limited-small-logo.png"
-                        height={44}
-                        width={44}
-                        alt="Pinecone Software Limited company small logo"
-                    />
-                </Link>
-                <Link href="/about">About</Link>
-                <Link href="/cv">CV</Link>
-            </header> */}
             <main>{children}</main>
             {!home && (
                 <div>

@@ -24,7 +24,7 @@ const Repo: React.FC = () => {
     }
 
     return (
-        <Layout>
+        <Layout home={false}>
             <Head>
                 <title>{repo?.name}</title>
             </Head>

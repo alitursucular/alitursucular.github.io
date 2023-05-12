@@ -2,14 +2,23 @@ import React from "react";
 import type { AppProps } from "next/app";
 import { Hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import "bootstrap/dist/css/bootstrap.css";
-import { Raleway, IBM_Plex_Sans } from "next/font/google";
-// import "@/styles/globals.css";
+import { Raleway, IBM_Plex_Sans, VT323 } from "next/font/google";
+import "normalize.css";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
+import "@/styles/globals.scss";
 
 const raleway = Raleway({ subsets: ["latin"] });
+
 const ibmSans = IBM_Plex_Sans({
     weight: "700",
     subsets: ["latin"]
+});
+
+const vt323 = VT323({
+    weight: "400",
+    subsets: ["latin"],
+    variable: "--VT323-font",
+    display: "swap"
 });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
@@ -22,6 +31,17 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                     :root {
                         --raleway-font: ${raleway.style.fontFamily};
                         --ibmSans-font: ${ibmSans.style.fontFamily};
+                        --vt323-font: ${vt323.style.fontFamily};
+                    }
+
+                    html {
+                        scroll-behavior: smooth !important;
+                    }
+
+                    a:visited,
+                    a:hover,
+                    a:active {
+                        color: inherit;
                     }
                 `}</style>
                 <Component {...pageProps} />

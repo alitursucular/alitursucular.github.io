@@ -1,44 +1,51 @@
+import React from "react";
 import Link from "next/link";
-import styles from "./Navigation.module.css";
+import styles from "./Navigation.module.scss";
+import { useRouter } from "next/router";
 
 const Navigation: React.FC<{ home?: boolean }> = ({ home }) => {
-    // TODO: Remove {} and return, just use ()
+    const router = useRouter();
+    const [navBg, setNavBg] = React.useState(false);
+
+    const changeNavBg = () => {
+        window.scrollY >= 100 ? setNavBg(true) : setNavBg(false);
+    };
+
+    React.useEffect(() => {
+        window.addEventListener("scroll", changeNavBg);
+        
+        return () => {
+            window.removeEventListener("scroll", changeNavBg);
+        };
+    }, []);
 
     return (
-        // TODO: opaque diye bir class var header icin, scrollda gelip gidiyor
-        <nav className={styles.navWrapper}>
-            <a className={styles.mobileBtn} href="#nav-wrap" title="Show navigation">
+        <nav
+            className={styles.navWrapper}
+            style={home && navBg ? { transition: "background-color 0.3s", backgroundColor: "black" } : {}}
+        >
+            {/* <a className={styles.mobileBtn} href="#nav-wrap" title="Show navigation">
                 Show navigation
             </a>
             <a className={styles.mobileBtn} href="#home" title="Hide navigation">
                 Hide navigation
-            </a>
+            </a> */}
             <ul className={styles.nav}>
-                {/* TODO: Bu current olayina bak */}
-                <li className={styles.current}>
-                    <Link className={styles.smoothscroll} href={`${home ? "" : "../"}#home`}>
-                        Home
-                    </Link>
+                <li className={router.asPath == "/" ? styles.current : ""}>
+                    <Link href={home ? "" : "../"}>Home</Link>
+                </li>
+                <li className={router.asPath === "/#repos" ? styles.current : ""}>
+                    <Link href={`${home ? "" : "../"}#repos`}>Repos</Link>
                 </li>
                 <li>
-                    <Link className={styles.smoothscroll} href={`${home ? "" : "../"}#repos`}>
-                        Repos
-                    </Link>
+                    {/* TODO: pdf acacam target blank olarak active classname lazim degil */}
+                    <Link href={`${home ? "" : "../"}cv`}>CV</Link>
                 </li>
-                <li>
-                    <Link className={styles.smoothscroll} href={`${home ? "" : "../"}cv`}>
-                        CV
-                    </Link>
+                <li className={router.asPath === "/#about" ? styles.current : ""}>
+                    <Link href={`${home ? "" : "../"}#about`}>About</Link>
                 </li>
-                <li>
-                    <Link className={styles.smoothscroll} href={`${home ? "" : "../"}#about`}>
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link className={styles.smoothscroll} href={`${home ? "" : "../"}#contact`}>
-                        Contact
-                    </Link>
+                <li className={router.asPath === "/#contact" ? styles.current : ""}>
+                    <Link href={`${home ? "" : "../"}#contact`}>Contact</Link>
                 </li>
             </ul>
         </nav>

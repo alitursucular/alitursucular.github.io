@@ -19,13 +19,17 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
+    "normalize.css": "^8.0.1",
     "particles-bg": "^2.5.5",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
-    "react-intersection-observer": "^9.4.3",
     "react-spinners": "^0.13.8",
     "react-spring": "^9.7.1",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
   }
 }
