@@ -2,6 +2,15 @@
     padding: 48px 0 32px;
 }
 
+.isLoading, .isError {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 22px;
+}
+
 .repoColumns {
     // -webkit-column-count: 3;
     // -moz-column-count: 3;

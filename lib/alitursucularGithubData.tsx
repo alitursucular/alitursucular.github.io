@@ -28,8 +28,8 @@ const alitursucularGithubDataByName = async (repoName: string): Promise<IAliturs
     return response.data;
 };
 
-const useFetchGitHub = (): UseQueryResult<IAlitursucularGithubDataResponse[], unknown> => {
-    return useQuery<IAlitursucularGithubDataResponse[], unknown>({
+const useFetchGitHub = (): UseQueryResult<IAlitursucularGithubDataResponse[], { message: string }> => {
+    return useQuery<IAlitursucularGithubDataResponse[], { message: string }>({
         queryKey: [QueryKeysEnum.ALITURSUCULAR_GITHUB_DATA],
         queryFn: alitursucularGithubData
     });

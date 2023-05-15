@@ -13,7 +13,7 @@ const Navigation: React.FC<{ home?: boolean }> = ({ home }) => {
 
     React.useEffect(() => {
         window.addEventListener("scroll", changeNavBg);
-        
+
         return () => {
             window.removeEventListener("scroll", changeNavBg);
         };
@@ -38,8 +38,9 @@ const Navigation: React.FC<{ home?: boolean }> = ({ home }) => {
                     <Link href={`${home ? "" : "../"}#repos`}>Repos</Link>
                 </li>
                 <li>
-                    {/* TODO: pdf acacam target blank olarak active classname lazim degil */}
-                    <Link href={`${home ? "" : "../"}cv`}>CV</Link>
+                    <a href="/alitursucular-senior-frontend-engineer-cv.pdf" rel="noopener noreferrer">
+                        CV
+                    </a>
                 </li>
                 <li className={router.asPath === "/#about" ? styles.current : ""}>
                     <Link href={`${home ? "" : "../"}#about`}>About</Link>

@@ -18,10 +18,34 @@ import RepoCard from "./RepoCard";
 import styles from "./Repos.module.scss";
 
 const Repos: React.FC = () => {
-    const { data: repos, isLoading } = useFetchGitHub();
+    const { data: repos, error, isLoading, isError } = useFetchGitHub();
 
     if (isLoading) {
-        return <BeatLoader color="#36d7b7" />;
+        return (
+            <div className={styles.isLoading}>
+                <BeatLoader color="black" size={32} />
+            </div>
+        );
+    }
+
+    if (isError) {
+        return (
+            <div className={styles.isError}>
+                <p>
+                    <b>Something went wrong while getting my repository data.</b>
+                </p>
+                <ul>
+                    <li>Error: {error.message}</li>
+                    <li>
+                        Why not look at my{" "}
+                        <a href="https://github.com/alitursucular" target="_blank" rel="noopener">
+                            GitHub
+                        </a>{" "}
+                        while I fix the error?
+                    </li>
+                </ul>
+            </div>
+        );
     }
 
     return (
@@ -29,27 +53,9 @@ const Repos: React.FC = () => {
             <Container>
                 <Row>
                     <Col>
-                        {/* {repos?.map(
-                    (repo: IAlitursucularGithubDataResponse, i: number) =>
-                        i % 2 === 0 && (
-                            <Row key={`row-${i}`}>
-                                <Col md={6}>
-                                    <RepoCard repo={repo} />
-                                </Col>
-                                {i + 1 < repos.length && (
-                                    <Col md={6}>
-                                        <RepoCard repo={repos[i + 1]} />
-                                    </Col>
-                                )}
-                            </Row>
-                        )
-                )} */}
                         <div className={styles.repoColumns}>
-                            {/* <div> */}
                             {repos?.map((repo: IAlitursucularGithubDataResponse, i: number) => (
-                                // <div key={i} className={styles.card}>
                                 <RepoCard key={i} repo={repo} />
-                                // </div>
                             ))}
                         </div>
                     </Col>

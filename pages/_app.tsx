@@ -33,16 +33,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                         --ibmSans-font: ${ibmSans.style.fontFamily};
                         --vt323-font: ${vt323.style.fontFamily};
                     }
-
-                    html {
-                        scroll-behavior: smooth !important;
-                    }
-
-                    a:visited,
-                    a:hover,
-                    a:active {
-                        color: inherit;
-                    }
                 `}</style>
                 <Component {...pageProps} />
             </Hydrate>
