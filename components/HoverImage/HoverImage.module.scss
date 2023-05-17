@@ -80,31 +80,31 @@
             cursor: pointer;
 
             &::-webkit-slider-thumb {
-                width: 32px;
-                height: 32px;
+                transform: scale(1.3);
             }
 
             &::-moz-range-thumb {
-                width: 32px;
-                height: 32px;
+                transform: scale(1.3);
             }
         }
 
         &::-webkit-slider-thumb {
-            transition: width 0.2s, height 0.2s;
-            -webkit-transition: width 0.2s, height 0.2s;
-            -webkit-appearance: none;
             appearance: none;
-            width: 25px;
-            height: 25px;
+            -webkit-appearance: none;
+            transition: all 0.1s ease-in-out;
+            -webkit-transition: all 0.1s ease-in-out;
+            width: 24px;
+            height: 24px;
             background: black;
         }
 
         &::-moz-range-thumb {
-            transition: width 0.2s, height 0.2s;
-            -webkit-transition: width 0.2s, height 0.2s;
-            width: 25px;
-            height: 25px;
+            appearance: none;
+            -webkit-appearance: none;
+            transition: all 0.1s ease-in-out;
+            -webkit-transition: all 0.1s ease-in-out;
+            width: 24px;
+            height: 24px;
             background: black;
         }
     }

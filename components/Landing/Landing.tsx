@@ -17,8 +17,6 @@ const Landing: React.FC = () => {
             <ParticlesBg type="thick" bg={true} />
             <div className={`row ${styles.banner}`}>
                 <div className={styles.bannerText}>
-                    {/* <animated.div style={spring}> */}
-                    {/* <div> */}
                     <h1 className={styles.headline}>Hello stranger.</h1>
                     <h3>
                         <span>
@@ -42,8 +40,6 @@ const Landing: React.FC = () => {
                             </a>
                         </li>
                     </ul>
-                    {/* </animated.div> */}
-                    {/* </div> */}
                 </div>
             </div>
             <div className={styles.scrolldown}>

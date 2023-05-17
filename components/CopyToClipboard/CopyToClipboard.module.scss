@@ -1,0 +1,37 @@
+.copy {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.copied {
+    pointer-events: none;
+
+    &::before {
+        content: "copied!";
+        position: absolute;
+        top: -140%;
+        color: white;
+        left: -80%;
+        font-size: 18px;
+        background-color: red;
+        padding: 4px 8px;
+        border-radius: 8px;
+        animation: copiedAnim 1.5s forwards linear;
+    }
+}
+
+@keyframes copiedAnim {
+    to {
+        top: -190%;
+        visibility: hidden;
+    }
+}

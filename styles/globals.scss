@@ -1,9 +1,17 @@
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth !important;
+    scroll-padding-top: 48px;
 
     * {
         font-family: var(--vt323-font);
     }
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    background-color: blue;
 }
 
 a:visited,

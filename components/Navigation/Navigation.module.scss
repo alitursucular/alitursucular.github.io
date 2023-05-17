@@ -1,87 +1,54 @@
-/* nav-wrap */
 .navWrapper {
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
-    
-    /* margin: 0 auto; */
-    z-index: 100;
+    z-index: 99;
     left: 0;
     top: 0;
 }
 
-/* .navWrapper ul,
-.navWrapper li,
-.navWrapper a {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-} */
-
-/* I am not using the below class */
-/* .opaque {
-    background-color: #333;
-} */
-
-/* hide toggle button */
-.navWrapper > a.mobileBtn {
-    display: none;
-}
-
-ul.nav {
-    display: flex;
-    font-family: var(--vt323-font);
-    list-style-type: none;
-    min-height: 48px;
-    width: auto;
-    margin: 0;
-
-    /* center align the menu */
-    /* text-align: center; */
-}
-
-/* ul.nav li {
+.nav {
     position: relative;
-    list-style: none;
-    height: 48px;
-    display: inline-block;
-} */
+    list-style-type: none;
+    width: auto;
+    border-radius: 21px;
+    padding: 0 12px;
+    margin: 0;
+    background-color: black;
 
-/* Links */
-ul.nav li a {
-    /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-
-    font-size: 22px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    display: inline-flex;
-    padding: 8px 13px;
-    line-height: 32px;
-    text-decoration: none;
-    /* text-align: left; */
-    color: white;
-
-    // -webkit-transition: color 0.2s ease-in-out;
-    // -moz-transition: color 0.2s ease-in-out;
-    // -o-transition: color 0.2s ease-in-out;
-    // -ms-transition: color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out;
-
-    // &:active {
-    //     background-color: transparent !important;
-    // }
-
-    &:hover {
-        text-shadow: 2px 2px 2px red;
-
-        // border-bottom: 14px solid orange !important;
-        // background-color: orange !important;
+    @media (min-width: 576px) {
+        border-radius: 0 0 50px 50px;
+        padding: 0 32px;
     }
-}
 
+    &_li {
+        display: inline-flex;
 
-ul.nav li.current a {
-    color: #fe6928;
+        a {
+            display: inline-flex;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 16px;
+            padding: 12px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.2s ease-in-out;
+
+            @media (min-width: 576px) {
+                font-size: 22px;
+                padding: 12px 16px;
+            }
+
+            &:hover {
+                text-shadow: 2px 2px 2px red;
+            }
+        }
+
+        &_current {
+            a {
+                color: #fe6928;
+            }
+        }
+    }
 }

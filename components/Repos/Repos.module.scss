@@ -1,8 +1,10 @@
 .repos {
+    background-color: whitesmoke;
     padding: 48px 0 32px;
 }
 
-.isLoading, .isError {
+.isLoading,
+.isError {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -12,9 +14,6 @@
 }
 
 .repoColumns {
-    // -webkit-column-count: 3;
-    // -moz-column-count: 3;
-    // column-count: 3;
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem;
@@ -52,20 +51,32 @@
     border-radius: 6px;
     padding: 16px;
     margin-bottom: 16px;
-    // background-color: blue;
-    
+
     &:hover {
         animation: change-background 0.4s infinite linear;
+
+        & .repoCard_titleWrapper_icon {
+            animation: blinker 1s linear infinite;
+        }
     }
-    
+
     &_link {
         color: black;
         text-decoration: none;
     }
 
-    &_title {
-        font-size: 26px;
-        margin: 0;
+    &_titleWrapper {
+        display: inline-flex;
+        align-items: flex-start;
+
+        &_title {
+            font-size: 26px;
+            margin: 0;
+        }
+
+        &_icon {
+            margin: 5px 0 0 -7px;
+        }
     }
 
     &_description {
@@ -80,6 +91,15 @@
 
     @media (min-width: 576px) {
         display: inline-block;
+    }
+}
+
+@keyframes blinker {
+    from {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
     }
 }
 

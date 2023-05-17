@@ -1,56 +1,70 @@
 import React from "react";
 import Link from "next/link";
-import { useSpring, animated, config } from "react-spring";
-import { FaLinkedin, FaGithub, FaAngleUp } from "react-icons/fa";
-import styles from "./Footer.module.scss";
+import dynamic from "next/dynamic";
+import { FaLinkedin, FaGithub, FaAngleUp, FaFilePdf, FaRegCopyright } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
+import styles from "./Footer.module.scss";
 
-const Footer: React.FC = () => {
-    const fadeProps = useSpring({
-        from: { opacity: 0 },
-        to: { opacity: 1 },
-        config: config.gentle,
-        delay: 200
-    });
+const CopyToClipboard = dynamic(() => import("@/components/CopyToClipboard"), { ssr: false });
 
-    return (
-        <footer className={styles.footer}>
-            <Container>
-                <Row>
-                    <Col>
-                        <animated.div style={fadeProps} className="twelve columns">
-                            <ul className={styles.socialLinks}>
+const Footer: React.FC = () => (
+    <footer id="contact" className={styles.footer}>
+        <Container>
+            <Row>
+                <Col>
+                    <div>
+                        <h3>Let&apos;s get in touch!</h3>
+                        <div className={styles.footer_contacts}>
+                            <div className={styles.footer_contacts_email}>
+                                <CopyToClipboard text="ali@pineconesoftware.co.uk" />
+                                <a href="mailto:ali@pineconesoftware.co.uk">ali@pineconesoftware.co.uk</a>
+                            </div>
+                            <ul className={styles.footer_contacts_links}>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/alitursucular/">
-                                        <FaLinkedin />
+                                    <a
+                                        href="https://www.linkedin.com/in/alitursucular/"
+                                        target="_blank"
+                                        title="LinkedIn profile"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FaLinkedin size={24} />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/alitursucular">
-                                        <FaGithub />
+                                    <a
+                                        href="https://github.com/alitursucular"
+                                        target="_blank"
+                                        title="GitHub profile"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FaGithub size={24} />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/alitursucular-senior-frontend-engineer-cv.pdf"
+                                        title="CV"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FaFilePdf size={24} />
                                     </a>
                                 </li>
                             </ul>
-                            <ul className={styles.copyright}>
-                                <li>&copy; {new Date().getFullYear()} Ali Tursucular</li>
-                                <li>
-                                    Design by{" "}
-                                    <a title="styleshout" href="http://www.alitursucular.github.io">
-                                        Ali Tursucular
-                                    </a>
-                                </li>
-                            </ul>
-                        </animated.div>
-                        <div id={styles.goTop}>
-                            <Link title="Back to Top" href="#home">
-                                <FaAngleUp className={styles.icon} />
-                            </Link>
                         </div>
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
-    );
-};
+                        <div className={styles.footer_copyright}>
+                            <FaRegCopyright size={12} style={{ marginRight: 8 }} /> {new Date().getFullYear()} Ali
+                            Tursucular - Designed by me (no sh*t, Sherlock)
+                        </div>
+                    </div>
+                    <div className={styles.footer_goToTop}>
+                        <Link href="#home" title="go to top">
+                            <FaAngleUp size={48} className={styles.footer_goToTop_anchor} />
+                        </Link>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    </footer>
+);
 
 export default Footer;
