@@ -4,21 +4,20 @@ import Link from "next/link";
 import { FaRegFilePowerpoint, FaLinkedin, FaAngleDown } from "react-icons/fa";
 import LetterReveal from "../LetterReveal";
 import styles from "./Landing.module.scss";
+import { Col, Container, Row } from "react-bootstrap";
 
 const ParticlesBg = dynamic(() => import("particles-bg"), {
     ssr: false
 });
 
-const Landing: React.FC = () => {
-    // TODO: Buraya bir sey gelmezse {} yok et and remove the return keyword.
-
-    return (
-        <section id="home" className={styles.home}>
-            <ParticlesBg type="thick" bg={true} />
-            <div className={`row ${styles.banner}`}>
-                <div className={styles.bannerText}>
-                    <h1 className={styles.headline}>Hello stranger.</h1>
-                    <h3>
+const Landing: React.FC = () => (
+    <section id="home" className={styles.landing}>
+        <ParticlesBg type="thick" bg={true} />
+        <Container fluid>
+            <Row>
+                <Col>
+                    <h1 className={styles.landing_headline}>Hello stranger.</h1>
+                    <h3 className={styles.landing_aboutText}>
                         <span>
                             <LetterReveal>
                                 I am a Senior Software Engineer in London, UK. I specialised in JavaScript-centric web
@@ -26,7 +25,7 @@ const Landing: React.FC = () => {
                             </LetterReveal>
                         </span>
                     </h3>
-                    <ul className={styles.social}>
+                    <ul className={styles.landing_links}>
                         <li>
                             <Link href="/CV">
                                 <FaRegFilePowerpoint size={18} />
@@ -40,15 +39,15 @@ const Landing: React.FC = () => {
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div className={styles.scrolldown}>
-                <Link href="#repos">
-                    <FaAngleDown className={styles.icon} />
-                </Link>
-            </div>
-        </section>
-    );
-};
+                </Col>
+            </Row>
+        </Container>
+        <div className={styles.landing_scrolldown}>
+            <Link href="#repos">
+                <FaAngleDown className={styles.icon} />
+            </Link>
+        </div>
+    </section>
+);
 
 export default Landing;
