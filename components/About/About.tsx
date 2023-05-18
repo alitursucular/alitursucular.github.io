@@ -9,7 +9,7 @@ const About: React.FC = () => (
     <section id="about" className={styles.about}>
         <Container>
             <Row>
-                <Col>
+                <Col lg={6}>
                     <div className={styles.about_infoWrapper}>
                         <h3 className={styles.about_infoWrapper_title} data-shadow="Who am I?">
                             Who am I?
@@ -29,7 +29,7 @@ const About: React.FC = () => (
                         </p>
                     </div>
                 </Col>
-                <Col>
+                <Col lg={6}>
                     <div className={styles.about_revealMeWrapper}>
                         <div className={styles.about_revealMeWrapper_tab}>
                             <span>Hover the image to reveal me!</span>

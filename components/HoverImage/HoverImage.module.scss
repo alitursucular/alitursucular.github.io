@@ -1,12 +1,17 @@
 .imagesContainer {
     position: relative;
     display: flex;
-    height: 100%;
     overflow: hidden;
-    width: fit-content;
     border: 5px solid black;
     border-bottom: 0;
     border-radius: 0 16px 0 0;
+
+    img {
+        @media (max-width: 576px) {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .pixelatedStyle {

@@ -3,27 +3,46 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./HoverImage.module.scss";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-interface Props {
+interface IHoverImage {
     pixelatedSrc: StaticImageData;
     originalSrc: StaticImageData;
 }
 
-const HoverImage: React.FC<Props> = ({ pixelatedSrc, originalSrc }) => {
+const HoverImage: React.FC<IHoverImage> = ({ pixelatedSrc, originalSrc }) => {
     const [showOriginal, setshowOriginal] = React.useState<boolean>(false);
     const [manuallyRevealed, setManuallyRevealed] = React.useState<boolean>(false);
     const [x, setX] = React.useState<number>(0);
     const [y, setY] = React.useState<number>(0);
     const [diameter, setDiameter] = React.useState<number>(80);
 
-    const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseEnter = (e: React.SyntheticEvent<HTMLDivElement>) => {
+        const event = e.nativeEvent as MouseEvent | TouchEvent;
+
         setshowOriginal(true);
-        setX(e.nativeEvent.offsetX);
-        setY(e.nativeEvent.offsetY);
+
+        if (event instanceof MouseEvent) {
+            setX(event.offsetX);
+            console.log(event.offsetX);
+            setY(event.offsetY);
+        } else if (event instanceof TouchEvent) {
+            const touch = event.touches[0];
+            console.log(touch.clientX - e.currentTarget.getBoundingClientRect().left);
+            setX(touch.clientX - e.currentTarget.getBoundingClientRect().left);
+            setY(touch.clientY - e.currentTarget.getBoundingClientRect().top);
+        }
     };
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        setX(e.nativeEvent.offsetX);
-        setY(e.nativeEvent.offsetY);
+    const handleMouseMove = (e: React.SyntheticEvent<HTMLDivElement>) => {
+        const event = e.nativeEvent as MouseEvent | TouchEvent;
+
+        if (event instanceof MouseEvent) {
+            setX(event.offsetX);
+            setY(event.offsetY);
+        } else if (event instanceof TouchEvent) {
+            const touch = event.touches[0];
+            setX(touch.clientX - e.currentTarget.getBoundingClientRect().left);
+            setY(touch.clientY - e.currentTarget.getBoundingClientRect().top);
+        }
     };
 
     const handleMouseLeave = () => {
@@ -44,16 +63,21 @@ const HoverImage: React.FC<Props> = ({ pixelatedSrc, originalSrc }) => {
         <>
             <div
                 className={styles.imagesContainer}
+                onTouchStart={!manuallyRevealed ? handleMouseEnter : undefined}
+                onTouchMove={!manuallyRevealed ? handleMouseMove : undefined}
+                onTouchEnd={!manuallyRevealed ? handleMouseLeave : undefined}
                 onMouseEnter={!manuallyRevealed ? handleMouseEnter : undefined}
                 onMouseMove={!manuallyRevealed ? handleMouseMove : undefined}
                 onMouseLeave={!manuallyRevealed ? handleMouseLeave : undefined}
+                style={{ touchAction: manuallyRevealed ? "initial" : "none" }}
             >
-                <Image src={pixelatedSrc} alt="pixelated image" />
-                <Image src={originalSrc} alt="original image" style={originalStyle} />
+                <Image src={pixelatedSrc} sizes="100vw" alt="pixelated image" />
+                <Image src={originalSrc} alt="original image" sizes="100vw" style={originalStyle} />
             </div>
             <div className={styles.revealContainer}>
                 <p className={styles.revealContainer_data}>
-                    X: <span>{x}</span> | Y: <span>{y}</span> | Diameter: <span>{diameter}</span> pixels
+                    X: <span>{Math.trunc(x)}</span> | Y: <span>{Math.trunc(y)}</span> | Diameter:{" "}
+                    <span>{diameter}</span> pixels
                 </p>
                 <button
                     className={styles.revealContainer_revealButton}

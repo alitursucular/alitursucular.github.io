@@ -1,19 +1,25 @@
 .about {
+    display: flex;
     background-color: yellow;
-    padding: 48px 0;
+    padding: 24px 0;
+
+    @media (min-width: 576px) {
+        padding: 48px 0;
+    }
 
     &_infoWrapper {
-        display: flex;
-        flex-flow: column nowrap;
-
         &_title {
             position: relative;
-            font-size: 120px;
-            font-weight: bold;
+            font-size: 80px;
             text-shadow: 6px 6px 0 black;
-            letter-spacing: 8px;
+            letter-spacing: 5px;
             color: white;
             margin: 0 0 24px;
+
+            @media (min-width: 576px) {
+                font-size: 120px;
+                letter-spacing: 8px;
+            }
 
             &::after {
                 content: attr(data-shadow);
@@ -37,14 +43,24 @@
         }
 
         &_content {
-            font-size: 32px;
+            font-size: 24px;
+            margin: 0;
+
+            @media (min-width: 576px) {
+                margin: 32px 0;
+                font-size: 32px;
+            }
         }
     }
 
     &_revealMeWrapper {
         position: relative;
-        width: max-content;
-        margin: 0 auto;
+        margin: 24px 0;
+
+        @media (min-width: 576px) {
+            width: max-content;
+            margin: 0 auto;
+        }
 
         &_tab {
             position: relative;
