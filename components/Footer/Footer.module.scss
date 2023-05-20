@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     font-size: 18px;
-    background-color: khaki;
+    background-color: cadetblue;
     text-align: center;
     padding: 48px 0 24px;
 
@@ -65,11 +65,15 @@
                     margin-left: 40px;
                 }
 
-                a:first-child {
-                    transition: color 0.1s ease-in-out;
+                a {
+                    color: black;
 
-                    &:hover {
-                        color: red;
+                    &:first-child {
+                        transition: color 0.1s ease-in-out;
+
+                        &:hover {
+                            color: red;
+                        }
                     }
                 }
             }
@@ -101,11 +105,11 @@
         &_anchor {
             transition: all 0.1s ease-in-out;
             border-radius: 100%;
-            background-color: khaki;
+            background-color: cadetblue;
             padding: 8px;
 
             &:hover {
-                background-color: darkkhaki;
+                background-color: #528789;
             }
         }
     }

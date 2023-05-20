@@ -8,10 +8,6 @@ interface ITagsWrapper {
 }
 
 const TagsWrapper: React.FC<ITagsWrapper> = ({ children }) => {
-    // const containerRef = React.useRef<HTMLDivElement>(null);
-    // const [containerWidth, setContainerWidth] = React.useState(0);
-    // const [totalItemWidth, setTotalItemWidth] = React.useState(0);
-
     const tags = React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === Tag) {
             return child;
@@ -19,27 +15,7 @@ const TagsWrapper: React.FC<ITagsWrapper> = ({ children }) => {
         return null;
     });
 
-    // React.useEffect(() => {
-    //     const container = containerRef.current;
-    //     if (container) {
-    //         setContainerWidth(container.clientWidth);
-    //         const itemElements = container.querySelectorAll<HTMLDivElement>(":scope > div");
-    //         const itemWidths = Array.from(itemElements).map((item) => item.getBoundingClientRect().width);
-    //         const totalWidth = itemWidths.reduce((acc, width) => acc + width, 0);
-    //         setTotalItemWidth(totalWidth);
-    //     }
-    // }, []);
-
-    // const numItemsToShow = Math.floor((containerWidth / totalItemWidth) * children.length);
-    // const showEllipsis = numItemsToShow < items.length;
-
-    return (
-        <div className={styles.tagsWrapper}>
-            {/* <div ref={containerRef} className={styles.tagsWrapper}> */}
-            {tags}
-            {/* {showEllipsis && <div style={{ padding: "0 8px" }}>...</div>} */}
-        </div>
-    );
+    return <div className={styles.tagsWrapper}>{tags}</div>;
 };
 
 export default TagsWrapper;

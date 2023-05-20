@@ -28,20 +28,16 @@ const alitursucularGithubDataByName = async (repoName: string): Promise<IAliturs
     return response.data;
 };
 
-const useFetchGitHub = (): UseQueryResult<IAlitursucularGithubDataResponse[], { message: string }> => {
-    return useQuery<IAlitursucularGithubDataResponse[], { message: string }>({
+const useFetchGitHub = (): UseQueryResult<IAlitursucularGithubDataResponse[], { message: string }> =>
+    useQuery<IAlitursucularGithubDataResponse[], { message: string }>({
         queryKey: [QueryKeysEnum.ALITURSUCULAR_GITHUB_DATA],
         queryFn: alitursucularGithubData
     });
-};
 
-const useGithubDataByName = (repoName: string): UseQueryResult<IAlitursucularGithubDataResponse, unknown> => {
-    console.log("in the hook: ", repoName);
-
-    return useQuery<IAlitursucularGithubDataResponse, unknown>({
+const useGithubDataByName = (repoName: string): UseQueryResult<IAlitursucularGithubDataResponse, { message: string }> =>
+    useQuery<IAlitursucularGithubDataResponse, { message: string }>({
         queryKey: [QueryKeysEnum.ALITURSUCULAR_GITHUB_DATA_BY_NAME, repoName],
         queryFn: () => alitursucularGithubDataByName(repoName)
     });
-};
 
 export { alitursucularGithubData, alitursucularGithubDataByName, useFetchGitHub, useGithubDataByName };

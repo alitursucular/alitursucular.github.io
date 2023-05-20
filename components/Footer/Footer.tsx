@@ -7,8 +7,15 @@ import styles from "./Footer.module.scss";
 
 const CopyToClipboard = dynamic(() => import("@/components/CopyToClipboard"), { ssr: false });
 
-const Footer: React.FC = () => (
+const Footer: React.FC<{ home: boolean }> = ({ home }) => (
     <footer id="contact" className={styles.footer}>
+        {home && (
+            <div className={styles.footer_goToTop}>
+                <Link href="#home" title="go to top">
+                    <FaAngleUp size={48} className={styles.footer_goToTop_anchor} />
+                </Link>
+            </div>
+        )}
         <Container>
             <Row>
                 <Col>
@@ -41,8 +48,8 @@ const Footer: React.FC = () => (
                             </li>
                             <li>
                                 <a
-                                    href="/alitursucular-senior-frontend-engineer-cv.pdf"
-                                    title="CV"
+                                    href={`/${process.env.CV_FILENAME}`}
+                                    title="Ali Tursucular CV"
                                     rel="noopener noreferrer"
                                 >
                                     <FaFilePdf size={48} />
@@ -55,11 +62,6 @@ const Footer: React.FC = () => (
                             <FaRegCopyright size={12} style={{ marginRight: 8 }} /> {new Date().getFullYear()} Ali
                             Tursucular - Designed by me (no sh*t, Sherlock)
                         </p>
-                    </div>
-                    <div className={styles.footer_goToTop}>
-                        <Link href="#home" title="go to top">
-                            <FaAngleUp size={48} className={styles.footer_goToTop_anchor} />
-                        </Link>
                     </div>
                 </Col>
             </Row>

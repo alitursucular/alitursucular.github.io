@@ -21,16 +21,9 @@ const Layout: React.FC<{ children: React.ReactNode; home: boolean }> = ({ childr
                 />
                 <meta name="og:title" content={siteTitle} />
             </Head>
-            <header>
-                <Navigation home={home} />
-            </header>
+            <Navigation home={home} />
             <main>{children}</main>
-            {!home && (
-                <div>
-                    <Link href="/">← Back to home</Link>
-                </div>
-            )}
-            <Footer />
+            <Footer home={home} />
         </>
     );
 };

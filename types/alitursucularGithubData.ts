@@ -4,5 +4,10 @@ export interface IAlitursucularGithubDataResponse {
     topics: string[];
     visibility: string;
     html_url: string;
-    readme: unknown;
+    readme: {
+        status: boolean;
+        url: string;
+        headers: Object;
+        data: string;
+    };
 }

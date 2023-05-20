@@ -1,12 +1,15 @@
 import React from "react";
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { dehydrate, QueryClient } from "@tanstack/react-query";
 import { QueryKeysEnum } from "@/types/queryKeys";
-import { BeatLoader } from "react-spinners";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
+import { dehydrate, QueryClient } from "@tanstack/react-query";
 import { alitursucularGithubDataByName, useGithubDataByName } from "@/lib/alitursucularGithubData";
-import Layout from "../../components/layout";
+import { Container, Row, Col } from "react-bootstrap";
+import Layout from "@/components/layout";
+import LoadingComponent from "@/components/LoadingComponent/LoadingComponent";
+import Readme from "@/components/Readme";
+import BackToHome from "@/components/BackToHome/BackToHome";
 
 const Repo: React.FC = () => {
     const router = useRouter();
@@ -15,7 +18,7 @@ const Repo: React.FC = () => {
     const { data: repo, isLoading, isError } = useGithubDataByName(repoName as string);
 
     if (isLoading) {
-        return <BeatLoader color="#36d7b7" />;
+        return <LoadingComponent />;
     }
 
     if (isError) {
@@ -26,14 +29,16 @@ const Repo: React.FC = () => {
     return (
         <Layout home={false}>
             <Head>
-                <title>{repo?.name}</title>
+                <title>{repo.name}</title>
             </Head>
-            <article>
-                <h1>{repo?.topics}</h1>
-                <div>
-                    <p>{repo?.visibility}</p>
-                </div>
-            </article>
+            <Readme readme={repo.readme} topics={repo.topics} />
+            <Container>
+                <Row>
+                    <Col lg={{ span: 6, offset: 3 }}>
+                        <BackToHome />
+                    </Col>
+                </Row>
+            </Container>
         </Layout>
     );
 };

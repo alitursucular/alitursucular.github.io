@@ -1,7 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import styles from "./HoverImage.module.scss";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import styles from "./HoverImage.module.scss";
 
 interface IHoverImage {
     pixelatedSrc: StaticImageData;

@@ -27,10 +27,10 @@ const Landing: React.FC = () => (
                     </h3>
                     <ul className={styles.landing_links}>
                         <li>
-                            <Link href="/CV">
+                            <a href={`/${process.env.CV_FILENAME}`} title="Ali Tursucular CV" rel="noopener noreferrer">
                                 <FaRegFilePowerpoint size={18} />
                                 CV
-                            </Link>
+                            </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/alitursucular/" target="_blank">

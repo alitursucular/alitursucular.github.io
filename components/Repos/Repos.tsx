@@ -1,31 +1,19 @@
 import React from "react";
-// import Head from "next/head";
-// import Image from "next/image";
-// import { Inter } from "next/font/google";
-import Link from "next/link";
-// import styles from "@/styles/Home.module.scss";
-// import Layout from "@/components/layout";
-// import { GetStaticProps } from "next";
-// import { dehydrate, QueryClient } from "@tanstack/react-query";
-import { useFetchGitHub } from "@/lib/alitursucularGithubData";
+import { GetStaticProps } from "next";
+import { QueryClient, dehydrate } from "@tanstack/react-query";
+import { QueryKeysEnum } from "@/types/queryKeys";
+import { alitursucularGithubData, useFetchGitHub } from "@/lib/alitursucularGithubData";
 import { IAlitursucularGithubDataResponse } from "@/types/alitursucularGithubData";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-// import { QueryKeysEnum } from "@/types/queryKeys";
-import { BeatLoader } from "react-spinners";
+import { Container, Row, Col } from "react-bootstrap";
 import RepoCard from "./RepoCard";
+import LoadingComponent from "@/components/LoadingComponent";
 import styles from "./Repos.module.scss";
 
 const Repos: React.FC = () => {
     const { data: repos, error, isLoading, isError } = useFetchGitHub();
 
     if (isLoading) {
-        return (
-            <div className={styles.isLoading}>
-                <BeatLoader color="black" size={32} />
-            </div>
-        );
+        return <LoadingComponent />;
     }
 
     if (isError) {
@@ -38,7 +26,7 @@ const Repos: React.FC = () => {
                     <li>Error: {error.message}</li>
                     <li>
                         Why not look at my{" "}
-                        <a href="https://github.com/alitursucular" target="_blank" rel="noopener">
+                        <a href="https://github.com/alitursucular" target="_blank" rel="noopener noreferrer">
                             GitHub
                         </a>{" "}
                         while I fix the error?
@@ -66,3 +54,15 @@ const Repos: React.FC = () => {
 };
 
 export default Repos;
+
+export const getStaticProps: GetStaticProps = async () => {
+    const queryClient = new QueryClient();
+
+    await queryClient.prefetchQuery([QueryKeysEnum.ALITURSUCULAR_GITHUB_DATA], alitursucularGithubData);
+
+    return {
+        props: {
+            dehydratedState: dehydrate(queryClient)
+        }
+    };
+};

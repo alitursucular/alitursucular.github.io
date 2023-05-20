@@ -17,7 +17,7 @@ const About: React.FC = () => (
                         <p className={styles.about_infoWrapper_content}>
                             I am a Senior Software Engineer in London, UK. I specialise in JavaScript-centric web
                             development. I am operating under my limited company,{" "}
-                            <a href="https://pineconesoftware.co.uk/" target="_blank" rel="noopener">
+                            <a href="https://pineconesoftware.co.uk/" target="_blank" rel="noopener noreferrer">
                                 Pinecone Software Limited
                             </a>
                             . I provide contract, freelance and project-based web services. I love to observe, research,
