@@ -11,4 +11,3 @@ I am a Senior Software Engineer in London, UK. I specialise in JavaScript-centri
 -   Contact: **ali@pineconesoftware.co.uk**
 -   More about me: **[CV](public/alitursucular-senior-frontend-engineer-cv.pdf)**
 -   Contact: **ali@pineconesoftware.co.uk**
--   More about me: **[CV](public/alitursucular-senior-frontend-engineer-cv.pdf)**
