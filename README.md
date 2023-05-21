@@ -10,4 +10,3 @@ I am a Senior Software Engineer in London, UK. I specialise in JavaScript-centri
 -   My professional blog: **[https://alitursucular.github.io/](https://alitursucular.github.io/)**
 -   Contact: **ali@pineconesoftware.co.uk**
 -   More about me: **[CV](public/alitursucular-senior-frontend-engineer-cv.pdf)**
--   Contact: **ali@pineconesoftware.co.uk**
