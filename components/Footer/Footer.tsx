@@ -48,7 +48,7 @@ const Footer: React.FC<{ home: boolean }> = ({ home }) => (
                             </li>
                             <li>
                                 <a
-                                    href={`/${process.env.CV_FILENAME}`}
+                                    href={`/${process.env.NEXT_PUBLIC_CV_FILENAME}`}
                                     title="Ali Tursucular CV"
                                     rel="noopener noreferrer"
                                 >

@@ -22,7 +22,7 @@ const Navigation: React.FC<{ home: boolean }> = ({ home }) => {
                         <Link href="/#repos">Repos</Link>
                     </li>
                     <li className={styles.nav_li}>
-                        <a href={`/${process.env.CV_FILENAME}`} rel="noopener noreferrer">
+                        <a href={`/${process.env.NEXT_PUBLIC_CV_FILENAME}`} rel="noopener noreferrer">
                             CV
                         </a>
                     </li>
