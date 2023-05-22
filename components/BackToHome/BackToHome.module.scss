@@ -1,0 +1,30 @@
+.backToHome {
+    margin-bottom: 32px;
+
+    a {
+        position: relative;
+        color: blue;
+        font-size: 24px;
+        padding: 4px;
+        z-index: 9;
+        border: 2px solid blue;
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background-color: aqua;
+            transition: width 0.5s;
+            z-index: -9;
+        }
+    }
+}

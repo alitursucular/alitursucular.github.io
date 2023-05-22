@@ -1,0 +1,116 @@
+.footer {
+    position: relative;
+    display: flex;
+    font-size: 18px;
+    background-color: cadetblue;
+    text-align: center;
+    padding: 48px 0 24px;
+
+    &_title {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    &_contacts {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 48px 0;
+
+        @media (min-width: 768px) {
+            flex-flow: row nowrap;
+        }
+
+        &_email {
+            display: inline-flex;
+            flex-flow: row-reverse nowrap;
+            align-items: center;
+            border-radius: 16px;
+            padding: 16px;
+            color: white;
+            background-color: black;
+
+            a {
+                font-size: 24px;
+                text-decoration: none;
+                color: white;
+                font-weight: lighter;
+                margin-right: 24px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &_links {
+            padding: 0;
+            margin: 24px 0 12px;
+
+            @media (min-width: 768px) {
+                margin: 0;
+            }
+
+            li {
+                display: inline-flex;
+                margin: 0;
+                padding: 0;
+
+                &:not(:first-child) {
+                    margin-left: 40px;
+                }
+
+                @media (min-width: 768px) {
+                    margin-left: 40px;
+                }
+
+                a {
+                    color: black;
+
+                    &:first-child {
+                        transition: color 0.1s ease-in-out;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin: 0;
+            font-size: 18px;
+
+            @media (min-width: 768px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    &_goToTop {
+        display: inline-flex;
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        margin-left: -30px;
+
+        &_anchor {
+            transition: all 0.1s ease-in-out;
+            border-radius: 100%;
+            background-color: cadetblue;
+            padding: 8px;
+
+            &:hover {
+                background-color: #528789;
+            }
+        }
+    }
+}
