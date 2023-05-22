@@ -1,10 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-// import styles from "./layout.module.scss";
-// import utilStyles from "../styles/utils.module.scss";
-import Link from "next/link";
-import Footer from "./Footer";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 export const siteTitle = "Ali Tursucular GitHub blog website";
 
@@ -12,14 +8,19 @@ const Layout: React.FC<{ children: React.ReactNode; home: boolean }> = ({ childr
     return (
         <>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>{siteTitle}</title>
-                <link rel="icon" href="/pinecone-software-limited-favicon.ico" />
+                <meta name="og:title" content={siteTitle} key="title" />
                 <meta
                     name="description"
                     content="Hello stranger. I am a Senior Software Engineer in London, UK. Visit my site to explore more about me!"
                 />
-                <meta name="og:title" content={siteTitle} />
+                <meta
+                    property="og:description"
+                    content="Hello stranger. I am a Senior Software Engineer in London, UK. Visit my site to explore more about me!"
+                    key="description"
+                />
+                <meta property="og:url" content="https://alitursucular.github.io/" />
+                <meta property="og:image" content="/images/alitursucular-github-blog-social-image.png" />
             </Head>
             <Navigation home={home} />
             <main>{children}</main>

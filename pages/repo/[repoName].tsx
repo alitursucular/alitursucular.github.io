@@ -30,6 +30,10 @@ const Repo: React.FC = () => {
         <Layout home={false}>
             <Head>
                 <title>{repo.name}</title>
+                <meta property="og:title" content={repo.name} key="title" />
+                <meta name="description" content={repo.description} />
+                <meta property="og:description" content={repo.description} key="description" />
+                <meta property="og:url" content={`https://alitursucular.github.io/${repo.name}`} />
             </Head>
             <Readme readme={repo.readme} topics={repo.topics} />
             <Container>
