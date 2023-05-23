@@ -28,7 +28,7 @@ const HoverImage: React.FC<IHoverImage> = ({ pixelatedSrc, originalSrc }) => {
             const touch = event.touches[0];
             console.log(touch.clientX - e.currentTarget.getBoundingClientRect().left);
             setX(touch.clientX - e.currentTarget.getBoundingClientRect().left);
-            setY(touch.clientY - e.currentTarget.getBoundingClientRect().top);
+            setY(touch.clientY - e.currentTarget.getBoundingClientRect().top - diameter);
         }
     };
 
@@ -41,7 +41,7 @@ const HoverImage: React.FC<IHoverImage> = ({ pixelatedSrc, originalSrc }) => {
         } else if (event instanceof TouchEvent) {
             const touch = event.touches[0];
             setX(touch.clientX - e.currentTarget.getBoundingClientRect().left);
-            setY(touch.clientY - e.currentTarget.getBoundingClientRect().top);
+            setY(touch.clientY - e.currentTarget.getBoundingClientRect().top - diameter);
         }
     };
 
