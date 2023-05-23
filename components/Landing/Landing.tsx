@@ -48,7 +48,7 @@ const Landing: React.FC = () => (
         </Container>
         <div className={styles.landing_scrolldown}>
             <Link href="#repos">
-                <FaAngleDown className={styles.icon} />
+                <FaAngleDown size={42} className={styles.icon} />
             </Link>
         </div>
     </section>
