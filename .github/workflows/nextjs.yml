@@ -75,6 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
