@@ -4,7 +4,14 @@ import Footer from "./Footer";
 
 export const siteTitle = "Ali Tursucular GitHub blog website";
 
-const Layout: React.FC<{ children: React.ReactNode; home: boolean }> = ({ children, home }) => {
+interface ILayout {
+    children: React.ReactNode;
+    home: boolean;
+    hasHeader?: boolean;
+    hasFooter?: boolean;
+}
+
+const Layout: React.FC<ILayout> = ({ children, home, hasHeader = true, hasFooter = true }) => {
     return (
         <>
             <Head>
@@ -22,9 +29,9 @@ const Layout: React.FC<{ children: React.ReactNode; home: boolean }> = ({ childr
                 <meta property="og:url" content="https://alitursucular.github.io/" />
                 <meta property="og:image" content="/images/alitursucular-github-blog-social-image.png" />
             </Head>
-            <Navigation home={home} />
+            {hasHeader && <Navigation home={home} />}
             <main>{children}</main>
-            <Footer home={home} />
+            {hasFooter && <Footer home={home} />}
         </>
     );
 };
