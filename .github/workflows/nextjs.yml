@@ -75,9 +75,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-        env:
-          # Setting an environment variable with the value of a configuration variable
-          env_var: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
@@ -95,4 +92,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        env:
+          # NEXT_APP_HEY: ${{ secrets.NEXT_APP_HEY }}
+          NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
         uses: actions/deploy-pages@v2
