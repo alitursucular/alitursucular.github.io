@@ -6,10 +6,9 @@ import { IAlitursucularGithubDataResponse } from "@/types/alitursucularGithubDat
 const alitursucularGithubData = async (): Promise<IAlitursucularGithubDataResponse[]> => {
     const response = await axios({
         method: "GET",
-        url: `http://127.0.0.1:5001/github-repository-fetcher/us-central1/app/alitursucularGithubRepos`,
+        url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/alitursucularGithubRepos`,
         headers: {
             "Content-Type": "application/json"
-            // Authorization: `Bearer ${accessToken}`
         }
     });
 
@@ -19,7 +18,7 @@ const alitursucularGithubData = async (): Promise<IAlitursucularGithubDataRespon
 const alitursucularGithubDataByName = async (repoName: string): Promise<IAlitursucularGithubDataResponse> => {
     const response = await axios({
         method: "GET",
-        url: `http://127.0.0.1:5001/github-repository-fetcher/us-central1/app/alitursucularGithubRepoByName/${repoName}`,
+        url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/alitursucularGithubRepoByName/${repoName}`,
         headers: {
             "Content-Type": "application/json"
         }
