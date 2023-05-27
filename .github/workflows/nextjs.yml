@@ -24,6 +24,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
+  NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL: ${{ secrets.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL }}
+
 jobs:
   # Build job
   build:
@@ -75,8 +79,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-        env:
-          NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
+        # env:
+          # NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
@@ -92,9 +96,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # - echo "NEXT_PUBLIC_CV_FILENAME is ${CI_COMMIT_REF_NAME}"
       - name: Deploy to GitHub Pages
         id: deployment
-        env:
+        # env:
           # NEXT_APP_HEY: ${{ secrets.NEXT_APP_HEY }}
-          NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
+          # NEXT_PUBLIC_CV_FILENAME: ${{ vars.NEXT_PUBLIC_CV_FILENAME }}
+
         uses: actions/deploy-pages@v2
