@@ -22,11 +22,9 @@ const HoverImage: React.FC<IHoverImage> = ({ pixelatedSrc, originalSrc }) => {
 
         if (event instanceof MouseEvent) {
             setX(event.offsetX);
-            console.log(event.offsetX);
             setY(event.offsetY);
         } else if (event instanceof TouchEvent) {
             const touch = event.touches[0];
-            console.log(touch.clientX - e.currentTarget.getBoundingClientRect().left);
             setX(touch.clientX - e.currentTarget.getBoundingClientRect().left);
             setY(touch.clientY - e.currentTarget.getBoundingClientRect().top - diameter);
         }
