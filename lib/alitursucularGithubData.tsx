@@ -7,9 +7,6 @@ const alitursucularGithubData = async (): Promise<IAlitursucularGithubDataRespon
     const response = await axios({
         method: "GET",
         url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/alitursucularGithubRepos`,
-        headers: {
-            "Content-Type": "application/json"
-        }
     });
 
     return response.data;
@@ -19,9 +16,6 @@ const alitursucularGithubDataByName = async (repoName: string): Promise<IAliturs
     const response = await axios({
         method: "GET",
         url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/alitursucularGithubRepoByName/${repoName}`,
-        headers: {
-            "Content-Type": "application/json"
-        }
     });
 
     return response.data;
