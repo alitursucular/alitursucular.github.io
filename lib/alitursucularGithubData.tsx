@@ -6,7 +6,7 @@ import { IAlitursucularGithubDataResponse } from "@/types/alitursucularGithubDat
 const alitursucularGithubData = async (): Promise<IAlitursucularGithubDataResponse[]> => {
     const response = await axios({
         method: "GET",
-        url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/alitursucularGithubRepos`,
+        url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/app/alitursucularGithubRepos`,
     });
 
     return response.data;
@@ -15,7 +15,7 @@ const alitursucularGithubData = async (): Promise<IAlitursucularGithubDataRespon
 const alitursucularGithubDataByName = async (repoName: string): Promise<IAlitursucularGithubDataResponse> => {
     const response = await axios({
         method: "GET",
-        url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/alitursucularGithubRepoByName/${repoName}`,
+        url: `${process.env.NEXT_PUBLIC_FIREBASE_MICROSERVICE_URL}/app/alitursucularGithubRepoByName/${repoName}`,
     });
 
     return response.data;

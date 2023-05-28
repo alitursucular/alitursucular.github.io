@@ -3,7 +3,7 @@ import styles from "./LoadingComponent.module.scss";
 
 const LoadingComponent: React.FC = () => (
     <div className={styles.loadingComponent}>
-        <BeatLoader color="black" size={32} />
+        <BeatLoader color="black" size={24} />
     </div>
 );
 
