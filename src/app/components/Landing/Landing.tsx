@@ -7,12 +7,11 @@ import { FaRegFilePowerpoint, FaLinkedin, FaAngleDown } from "react-icons/fa";
 import LetterReveal from "../LetterReveal";
 import styles from "./Landing.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
-import ParticlesBg from "particles-bg";
 
 // https://github.com/lindelof/particles-bg/issues/18
-// const ParticlesBg = dynamic(() => import("particles-bg"), {
-//     ssr: false
-// });
+const ParticlesBg = dynamic(() => import("particles-bg"), {
+    ssr: false
+});
 
 /**
  * Landing component (a.k.a The "home" tab)
