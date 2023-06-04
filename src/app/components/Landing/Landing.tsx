@@ -9,9 +9,9 @@ import styles from "./Landing.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
 
 // https://github.com/lindelof/particles-bg/issues/18
-const ParticlesBg = dynamic(() => import("particles-bg"), {
-    ssr: false
-});
+// const ParticlesBg = dynamic(() => import("particles-bg"), {
+//     ssr: false
+// });
 
 /**
  * Landing component (a.k.a The "home" tab)
@@ -19,7 +19,7 @@ const ParticlesBg = dynamic(() => import("particles-bg"), {
  */
 const Landing: React.FC = () => (
     <section id="home" className={styles.landing}>
-        <ParticlesBg type="thick" bg={true} />
+        {/* <ParticlesBg type="thick" bg={true} /> */}
         <Container fluid>
             <Row>
                 <Col>
