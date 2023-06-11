@@ -6,7 +6,7 @@ import styles from "./Repos.module.scss";
 
 const RepoCard: React.FC<{ repo: IAlitursucularGithubDataResponse }> = ({ repo }) => (
     <div className={styles.repoCard}>
-        <a href={`/repo/${repo.name}`} className={styles.repoCard_link}>
+        <Link href={`/repo/${repo.name}`} className={styles.repoCard_link}>
             <div className={styles.repoCard_titleWrapper}>
                 <span className={styles.repoCard_titleWrapper_icon}>
                     <FaCaretRight size={24} />
@@ -19,7 +19,7 @@ const RepoCard: React.FC<{ repo: IAlitursucularGithubDataResponse }> = ({ repo }
                     <Tag key={Math.random() * i}>{topic}</Tag>
                 ))}
             </TagsWrapper>
-        </a>
+        </Link>
     </div>
 );
 
