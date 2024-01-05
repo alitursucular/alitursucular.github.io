@@ -13,6 +13,7 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('http://localhost:3000'),
     title: "Ali Tursucular GitHub blog website",
     description:
         "Hello stranger. I am a Senior Software Engineer in London, UK. Visit my site to explore more about me!",

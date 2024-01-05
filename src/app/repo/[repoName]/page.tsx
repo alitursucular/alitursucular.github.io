@@ -3,10 +3,19 @@ import { dehydrate } from "@tanstack/react-query";
 import Layout from "@/components/CustomLayout";
 import Readme from "@/components/Readme";
 import BackToHome from "@/components/BackToHome";
-import { alitursucularGithubDataByName } from "@/lib/alitursucularGithubData";
+import { alitursucularGithubData, alitursucularGithubDataByName } from "@/lib/alitursucularGithubData";
 import Hydrate from "@/utils/hydrateClient";
 import getQueryClient from "@/utils/getQueryClient";
 import { QueryKeysEnum } from "@/types/queryKeys";
+
+// Return a list of `params` to populate the [slug] dynamic segment
+export async function generateStaticParams() {
+    const repos = alitursucularGithubData();
+
+    return (await repos).map((repo) => ({
+        repoName: repo.name
+    }));
+}
 
 const RepoPage = async ({ params }: { params: { repoName: string } }) => {
     const { repoName } = params;
